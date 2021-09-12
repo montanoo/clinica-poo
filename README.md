@@ -2,6 +2,7 @@
 ---
 ## Integrantes 05T 🎈
 - Fernando Josué Montano González. MG210111
+- Andrea Guadalupe Velásquez Joyar VJ210576
 
 ---
 ## Licencia implementada 📜
