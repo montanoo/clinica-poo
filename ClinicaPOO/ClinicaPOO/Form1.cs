@@ -14,8 +14,13 @@ namespace ClinicaPOO
     {
         public Form1()
         {
+            //Ivania Lebrón
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
