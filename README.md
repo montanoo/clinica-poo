@@ -4,6 +4,7 @@
 - Fernando Josué Montano González.  MG210111
 - Andrea Guadalupe Velásquez Joyar. VJ210576
 - Kallahan Andrea Salas Bojórquez.  SB210537
+- Ivania María Lebrón Flores. LF212591
 
 ---
 ## Licencia implementada 📜
