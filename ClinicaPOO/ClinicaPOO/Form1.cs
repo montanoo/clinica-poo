@@ -14,6 +14,7 @@ namespace ClinicaPOO
     {
         public Form1()
         {
+            //Kallahan Salas
             InitializeComponent();
         }
 
