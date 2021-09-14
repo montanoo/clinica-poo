@@ -9,7 +9,7 @@
 
 ---
 ## Licencia implementada 📜
-CC BY-SA 4.0: Especificada a su vez en el archivo LICENSE. 
+Proyecto bajo la licencia CC BY-SA 4.0 (Attribution-ShareAlike): Especificada a su vez en el archivo LICENSE. 
 <br> Usted es libre de: compartir — copiar y redistribuir el material en cualquier medio o formato. Adaptar — remezclar, transformar y construir a partir del material para cualquier propósito, incluso comercialmente, con el único requisito de brindar los créditos, así como mencionar si se han realizado cambios y seguir aplicando la misma licencia. </br>
 
 ---
