@@ -17,5 +17,6 @@ Proyecto bajo la licencia CC BY-SA 4.0 (Attribution-ShareAlike): Especificada a 
 - <a href="https://trello.com/b/IUarvt0I/cl%C3%ADnica-poo"> Trello ✔</a> 
 - <a href="https://drive.google.com/file/d/19PDoaEh0IAiC1CuuQlK38AqYz3Np3oh9/view?usp=sharing"> Mockups en Drive 👀</a> 
 - <a href="https://www.canva.com/design/DAEp2Bv5ttg/n2HKD_PPKg0QNoFiSVrx6A/view?mode=prototype#p-gina-sin-t-tulo"> Mockups en Canva ✨</a> 
-- <a href="https://drive.google.com/file/d/13BDu1AQENqid5has6lyx9atEjqROy7NJ/view?usp=sharing"> Enlace al documento 🔗 </a>
+- <a href="https://drive.google.com/file/d/13BDu1AQENqid5has6lyx9atEjqROy7NJ/view?usp=sharing"> Enlace al documento (Entrega I - POO)🔗 </a>
+- <a href="https://drive.google.com/file/d/1BDQj7G9BiJAIGOhLq3AV0GvkPttGQz_3/view?usp=sharing"> Enlace al documento (Entrega I - MDB)🔗 </a>
 ---
