@@ -118,25 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="0ba3d60362c7e6d256cfc1f37156bad9 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0ba3d60362c7e6d256cfc1f37156bad9 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Welcome to the clinic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Welcome to the clinic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HD-wallpaper-plain-purple-background-purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HD-wallpaper-plain-purple-background-purple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background with banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background with banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0ba3d60362c7e6d256cfc1f37156bad9 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0ba3d60362c7e6d256cfc1f37156bad9 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clinica-dental 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clinica-dental 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="healteeth-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\healteeth-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clinica-dental 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clinica-dental 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="watch-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watch-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

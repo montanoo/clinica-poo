@@ -63,6 +63,36 @@ namespace ClinicaPOO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0ba3d60362c7e6d256cfc1f37156bad9_2 {
+            get {
+                object obj = ResourceManager.GetObject("0ba3d60362c7e6d256cfc1f37156bad9 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _0ba3d60362c7e6d256cfc1f37156bad9_21 {
+            get {
+                object obj = ResourceManager.GetObject("0ba3d60362c7e6d256cfc1f37156bad9 21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _lock {
+            get {
+                object obj = ResourceManager.GetObject("lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -73,9 +103,49 @@ namespace ClinicaPOO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background_splash {
+            get {
+                object obj = ResourceManager.GetObject("Background splash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_with_banner {
+            get {
+                object obj = ResourceManager.GetObject("Background with banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clinica_dental_1 {
             get {
                 object obj = ResourceManager.GetObject("clinica-dental 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HD_wallpaper_plain_purple_background_purple {
+            get {
+                object obj = ResourceManager.GetObject("HD-wallpaper-plain-purple-background-purple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap healteeth_logo {
+            get {
+                object obj = ResourceManager.GetObject("healteeth-logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +173,26 @@ namespace ClinicaPOO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user__1_ {
+            get {
+                object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_1 {
             get {
                 object obj = ResourceManager.GetObject("user 1", resourceCulture);
@@ -116,6 +206,16 @@ namespace ClinicaPOO.Properties {
         internal static System.Drawing.Bitmap user_11 {
             get {
                 object obj = ResourceManager.GetObject("user 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watch_password {
+            get {
+                object obj = ResourceManager.GetObject("watch-password", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
