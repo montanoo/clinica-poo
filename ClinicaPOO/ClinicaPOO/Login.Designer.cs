@@ -29,6 +29,7 @@ namespace ClinicaPOO
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -157,7 +158,7 @@ namespace ClinicaPOO
             // picWatchPassword
             // 
             this.picWatchPassword.BackColor = System.Drawing.Color.Transparent;
-            this.picWatchPassword.Image = global::ClinicaPOO.Properties.Resources.watch_password;
+            this.picWatchPassword.Image = ((System.Drawing.Image)(resources.GetObject("picWatchPassword.Image")));
             this.picWatchPassword.Location = new System.Drawing.Point(553, 446);
             this.picWatchPassword.Name = "picWatchPassword";
             this.picWatchPassword.Size = new System.Drawing.Size(37, 32);
@@ -214,7 +215,7 @@ namespace ClinicaPOO
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::ClinicaPOO.Properties.Resources._lock;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(606, 427);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 52);
@@ -225,7 +226,7 @@ namespace ClinicaPOO
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ClinicaPOO.Properties.Resources.user__1_;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(609, 304);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 52);
@@ -244,7 +245,7 @@ namespace ClinicaPOO
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ClinicaPOO.Properties.Resources.healteeth_logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 167);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(665, 637);
@@ -255,7 +256,7 @@ namespace ClinicaPOO
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BackgroundImage = global::ClinicaPOO.Properties.Resources.HD_wallpaper_plain_purple_background_purple;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
