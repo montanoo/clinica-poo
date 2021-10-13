@@ -49,5 +49,17 @@ namespace ClinicaPOO
             this.BackColor = Color.White;
             btnLogin.FlatAppearance.BorderColor = Color.FromArgb(255, 0, 0, 255);
         }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Type here...")
+            { txtEmail.Text = ""; }
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            { txtPassword.Text = ""; }
+        }
     }
 }

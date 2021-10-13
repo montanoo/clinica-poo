@@ -66,6 +66,7 @@ namespace ClinicaPOO
             this.txtEmail.Size = new System.Drawing.Size(493, 31);
             this.txtEmail.TabIndex = 1;
             this.txtEmail.Text = "Type here...";
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // txtPassword
             // 
@@ -80,6 +81,7 @@ namespace ClinicaPOO
             this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // label1
             // 
