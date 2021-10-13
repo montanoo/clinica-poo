@@ -76,8 +76,7 @@ namespace ClinicaPOO
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
             this.txtPassword.Location = new System.Drawing.Point(97, 447);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(482, 31);
+            this.txtPassword.Size = new System.Drawing.Size(430, 31);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -160,13 +159,15 @@ namespace ClinicaPOO
             // picWatchPassword
             // 
             this.picWatchPassword.BackColor = System.Drawing.Color.Transparent;
+            this.picWatchPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picWatchPassword.Image = ((System.Drawing.Image)(resources.GetObject("picWatchPassword.Image")));
-            this.picWatchPassword.Location = new System.Drawing.Point(553, 446);
+            this.picWatchPassword.Location = new System.Drawing.Point(561, 428);
             this.picWatchPassword.Name = "picWatchPassword";
-            this.picWatchPassword.Size = new System.Drawing.Size(37, 32);
+            this.picWatchPassword.Size = new System.Drawing.Size(48, 51);
             this.picWatchPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picWatchPassword.TabIndex = 18;
             this.picWatchPassword.TabStop = false;
+            this.picWatchPassword.Click += new System.EventHandler(this.picWatchPassword_Click);
             // 
             // linkSignUp
             // 
@@ -218,7 +219,7 @@ namespace ClinicaPOO
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(606, 427);
+            this.pictureBox3.Location = new System.Drawing.Point(615, 426);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 52);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

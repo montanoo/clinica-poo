@@ -13,6 +13,7 @@ namespace ClinicaPOO
 {
     public partial class Login : Form
     {
+        int clickCounter = 0;
         public Login()
         {
             InitializeComponent();
@@ -29,7 +30,8 @@ namespace ClinicaPOO
             {
                 Connection sqlConnection = new Connection();
                 sqlConnection.Connect();
-                SqlDataAdapter sqlAdapter = new SqlDataAdapter($"SELECT COUNT(*) FROM patient WHERE email='{txtEmail.Text}' AND password='{txtPassword.Text}'", sqlConnection.WindowsAuth);
+                SqlDataAdapter sqlAdapter = new SqlDataAdapter($"SELECT COUNT(*) FROM patient WHERE " +
+                    $"email='{txtEmail.Text}' AND password='{txtPassword.Text}'", sqlConnection.WindowsAuth);
 
                 DataTable dt = new DataTable();
                 sqlAdapter.Fill(dt);
@@ -60,6 +62,15 @@ namespace ClinicaPOO
         {
             if (txtPassword.Text == "Password")
             { txtPassword.Text = ""; }
+        }
+
+        private void picWatchPassword_Click(object sender, EventArgs e)
+        {
+            clickCounter++;
+            if (clickCounter % 2 == 1)
+                txtPassword.UseSystemPasswordChar = false;
+            else
+                txtPassword.UseSystemPasswordChar = true;
         }
     }
 }
