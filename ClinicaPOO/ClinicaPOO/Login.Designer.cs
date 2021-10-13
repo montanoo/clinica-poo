@@ -116,7 +116,7 @@ namespace ClinicaPOO
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(183, 74);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Log In";
+            this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             this.btnLogin.MouseHover += new System.EventHandler(this.btnLogin_MouseHover);
@@ -211,9 +211,9 @@ namespace ClinicaPOO
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
             this.label4.Location = new System.Drawing.Point(74, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 81);
+            this.label4.Size = new System.Drawing.Size(219, 81);
             this.label4.TabIndex = 14;
-            this.label4.Text = "LOG IN";
+            this.label4.Text = "LOGIN";
             // 
             // pictureBox3
             // 

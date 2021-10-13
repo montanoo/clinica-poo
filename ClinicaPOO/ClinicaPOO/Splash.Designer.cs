@@ -131,11 +131,11 @@ namespace ClinicaPOO
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(82, 523);
+            this.label2.Location = new System.Drawing.Point(60, 528);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(935, 38);
+            this.label2.Size = new System.Drawing.Size(945, 38);
             this.label2.TabIndex = 9;
-            this.label2.Text = "This project is under the Creative Commons Atribute Share-Alike license.";
+            this.label2.Text = "This project is under the Creative Commons Attribute Share-Alike license.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
