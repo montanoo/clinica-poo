@@ -28,17 +28,30 @@ namespace ClinicaPOO
         {
             try
             {
-                Connection sqlConnection = new Connection();
-                sqlConnection.Connect();
-                SqlDataAdapter sqlAdapter = new SqlDataAdapter($"SELECT COUNT(*) FROM patient WHERE " +
-                    $"email='{txtEmail.Text}' AND password='{txtPassword.Text}'", sqlConnection.WindowsAuth);
+                Connection sqlVariables = new Connection();
+                sqlVariables.Connect();
+                string connectString = sqlVariables.WindowsAuth;
 
-                DataTable dt = new DataTable();
-                sqlAdapter.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
-                    MessageBox.Show("User login successfull!", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                SqlConnection windowsAuthConn = new SqlConnection(connectString);
+                windowsAuthConn.Open();
+
+                string verify = "SELECT email, password FROM patient WHERE email = @vEmail AND password = @vPassword";
+                SqlCommand command = new SqlCommand(verify, windowsAuthConn);
+                command.Parameters.AddWithValue("@vEmail", txtEmail.Text);
+                command.Parameters.AddWithValue("@vPassword", txtPassword.Text);
+
+                SqlDataReader readData = command.ExecuteReader();
+
+                if (readData.Read())
+                {
+                    windowsAuthConn.Close();
+                    MessageBox.Show("User is correct");
+                }
                 else
-                    MessageBox.Show("Something's wrong!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show("Wrong user or password.");
+                }
+
             }
             catch(Exception errorHappened)
             {

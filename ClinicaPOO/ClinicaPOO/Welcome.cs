@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ClinicaPOO
 {
@@ -26,6 +27,14 @@ namespace ClinicaPOO
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            bool databaseExist = CheckDatabase("ClinicaPOO");
+
+            if (!databaseExist)
+            {
+                // MessageBox.Show("Creating db");
+                CreateDatabase();
+            }
+            // MessageBox.Show("Database already exists!");
             Login changeToLogin = new Login();
             changeToLogin.Show();
             this.Hide();
@@ -40,6 +49,117 @@ namespace ClinicaPOO
         private void Welcome_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private bool CheckDatabase(string databaseName)
+        {
+            Connection sqlConnection = new Connection();
+            sqlConnection.Connect();
+
+            string fromMaster = sqlConnection.WindowsAuth.Replace("Initial Catalog=ClinicaPOO", "Initial Catalog=master");
+            SqlConnection connectionString = new SqlConnection(fromMaster);
+
+            var cmdText = "SELECT COUNT(*) FROM master.dbo.sysdatabases where name=@database";
+
+            using (var sqlConn = new SqlConnection(fromMaster))
+            {
+                using (var sqlCmd = new SqlCommand(cmdText, sqlConn))
+                {
+                    sqlCmd.Parameters.Add("@database", SqlDbType.NVarChar).Value = databaseName;
+
+                    sqlConn.Open();
+                    bool alreadyExists = Convert.ToInt32(sqlCmd.ExecuteScalar()) == 1;
+                    return alreadyExists;
+                }
+            }
+
+        }
+
+        private void CreateDatabase()
+        {
+            Connection sqlConnection = new Connection();
+            sqlConnection.Connect();
+
+            string fromMaster = sqlConnection.WindowsAuth.Replace("Initial Catalog=ClinicaPOO", "Initial Catalog=master");
+            SqlConnection connectionString = new SqlConnection(fromMaster);
+
+            string createDB = "CREATE DATABASE " + "ClinicaPOO";
+
+            string appointmentsTable = "USE ClinicaPOO;" +
+                "CREATE TABLE appointments (" +
+                "id int IDENTITY(1,1) NOT NULL," +
+                "dentist_id int," +
+                "patient_id int," +
+                "appointment_time datetime," +
+                "reason varchar(max)," +
+                 "method_id int); ";
+
+            string patientTable = "USE ClinicaPOO;" +
+                "CREATE TABLE patient(" +
+                "id int IDENTITY(1,1) NOT NULL," +
+                "dui varchar(10)," +
+                "[name] varchar(50)," +
+                "lastname varchar(50)," +
+                "email varchar(255)," +
+                "phone varchar(9)," +
+                "birthdate date," +
+                "[password] varchar(max)" +
+                "CONSTRAINT chk_password CHECK(DATALENGTH([password]) >= 8));";
+
+            string dentistTable = "USE ClinicaPOO;" +
+                "CREATE TABLE dentist(" +
+                "d int IDENTITY(1,1) NOT NULL," +
+                "[name] varchar(50)," +
+                "specialty varchar(25)," +
+                "schedule datetime," +
+                "email varchar(255)," +
+                "phone varchar(9));";
+
+            string inventoryTable = "USE ClinicaPOO;" +
+                "CREATE TABLE inventory(" +
+                "id int IDENTITY(1,1) NOT NULL," +
+                "product varchar(100)," +
+                "quantity int," +
+                "price decimal(18, 2));";
+
+            string methodsTable = "USE ClinicaPOO;" +
+                  "CREATE TABLE methods(" +
+                 "id int IDENTITY(1,1) NOT NULL," +
+                 "[name] varchar(50)," +
+                 "[description] varchar(max)," +
+                 "price decimal(18, 2)," +
+                 "duration int);";
+
+            string doctorStatusTable = "USE ClinicaPOO;" +
+                "CREATE TABLE doctor_status(" +
+                "dentist_id int," +
+                "dentist_status varchar(8));";
+
+            SqlCommand cmd = new SqlCommand(createDB, connectionString);
+            SqlCommand cmd1 = new SqlCommand(appointmentsTable, connectionString);
+            SqlCommand cmd2 = new SqlCommand(patientTable, connectionString);
+            SqlCommand cmd3 = new SqlCommand(dentistTable, connectionString);
+            SqlCommand cmd4 = new SqlCommand(inventoryTable, connectionString);
+            SqlCommand cmd5 = new SqlCommand(methodsTable, connectionString);
+            SqlCommand cmd6 = new SqlCommand(doctorStatusTable, connectionString);
+
+            try
+            {
+                connectionString.Open();
+                cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
+                cmd4.ExecuteNonQuery();
+                cmd5.ExecuteNonQuery();
+                cmd6.ExecuteNonQuery();
+                connectionString.Close();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show($"There was an error creating the database! {error.Message}");
+            }
+
         }
     }
 }
