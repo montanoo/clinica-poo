@@ -39,13 +39,13 @@ namespace ClinicaPOO
          protected override void OnPaint(PaintEventArgs e)
          {
              int borderRadius = 25;
-             float borderThickness = 1.75f;
+             float borderThickness = 1f;
              base.OnPaint(e);
              RectangleF Rect = new RectangleF(0, 0, this.Width, this.Height);
              GraphicsPath GraphPath = GetRoundPath(Rect, borderRadius);
 
              this.Region = new Region(GraphPath);
-             using (Pen pen = new Pen(Color.Silver, borderThickness))
+             using (Pen pen = new Pen(Color.White, borderThickness))
              {
                  pen.Alignment = PenAlignment.Inset;
                  e.Graphics.DrawPath(pen, GraphPath);
