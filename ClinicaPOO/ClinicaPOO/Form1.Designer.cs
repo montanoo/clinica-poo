@@ -56,6 +56,7 @@ namespace ClinicaPOO
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -245,6 +246,7 @@ namespace ClinicaPOO
             // backbtn
             // 
             this.backbtn.BackColor = System.Drawing.Color.Transparent;
+            this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backbtn.FlatAppearance.BorderSize = 0;
             this.backbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

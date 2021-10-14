@@ -18,6 +18,9 @@ namespace ClinicaPOO
             InitializeComponent();
             var fechaactual = DateTime.Now;
             dateTimePicker1.MinDate = fechaactual;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd/mm/yyyy hh:mm tt";
+
 
         }
 
