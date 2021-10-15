@@ -16,5 +16,10 @@ namespace ClinicaPOO
         {
             InitializeComponent();
         }
+
+        private void btnBookApp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

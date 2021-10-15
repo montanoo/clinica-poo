@@ -67,6 +67,7 @@ namespace ClinicaPOO
             this.btnListApp.BackColor = System.Drawing.Color.Transparent;
             this.btnListApp.BackgroundImage = global::ClinicaPOO.Properties.Resources.clipboard_1;
             this.btnListApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnListApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListApp.Location = new System.Drawing.Point(589, 278);
             this.btnListApp.Name = "btnListApp";
             this.btnListApp.Size = new System.Drawing.Size(212, 211);
@@ -78,17 +79,20 @@ namespace ClinicaPOO
             this.btnBookApp.BackColor = System.Drawing.Color.Transparent;
             this.btnBookApp.BackgroundImage = global::ClinicaPOO.Properties.Resources.appointment_1;
             this.btnBookApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBookApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBookApp.Location = new System.Drawing.Point(197, 302);
             this.btnBookApp.Name = "btnBookApp";
             this.btnBookApp.Size = new System.Drawing.Size(168, 168);
             this.btnBookApp.TabIndex = 2;
             this.btnBookApp.TabStop = false;
+            this.btnBookApp.Click += new System.EventHandler(this.btnBookApp_Click);
             // 
             // btnDentists
             // 
             this.btnDentists.BackColor = System.Drawing.Color.Transparent;
             this.btnDentists.BackgroundImage = global::ClinicaPOO.Properties.Resources.dentist__1__1;
             this.btnDentists.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDentists.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDentists.Location = new System.Drawing.Point(1035, 302);
             this.btnDentists.Name = "btnDentists";
             this.btnDentists.Size = new System.Drawing.Size(168, 168);
@@ -100,6 +104,7 @@ namespace ClinicaPOO
             this.btnProfile.BackColor = System.Drawing.Color.Transparent;
             this.btnProfile.BackgroundImage = global::ClinicaPOO.Properties.Resources.user__1__1;
             this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfile.Location = new System.Drawing.Point(197, 673);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(167, 168);
@@ -111,6 +116,7 @@ namespace ClinicaPOO
             this.btnPharmacy.BackColor = System.Drawing.Color.Transparent;
             this.btnPharmacy.BackgroundImage = global::ClinicaPOO.Properties.Resources.pharmacy_1;
             this.btnPharmacy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPharmacy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPharmacy.Location = new System.Drawing.Point(602, 666);
             this.btnPharmacy.Name = "btnPharmacy";
             this.btnPharmacy.Size = new System.Drawing.Size(175, 175);
@@ -122,6 +128,7 @@ namespace ClinicaPOO
             this.btnMedicines.BackColor = System.Drawing.Color.Transparent;
             this.btnMedicines.BackgroundImage = global::ClinicaPOO.Properties.Resources.pill_1;
             this.btnMedicines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMedicines.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMedicines.Location = new System.Drawing.Point(1035, 666);
             this.btnMedicines.Name = "btnMedicines";
             this.btnMedicines.Size = new System.Drawing.Size(175, 175);
