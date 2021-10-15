@@ -39,6 +39,8 @@ namespace ClinicaPOO
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkSignUp = new System.Windows.Forms.LinkLabel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -173,6 +175,8 @@ namespace ClinicaPOO
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.linkSignUp);
+            this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.btnSignUp);
@@ -202,6 +206,33 @@ namespace ClinicaPOO
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(741, 982);
             this.panel2.TabIndex = 17;
+            // 
+            // linkSignUp
+            // 
+            this.linkSignUp.AutoSize = true;
+            this.linkSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.linkSignUp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
+            this.linkSignUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
+            this.linkSignUp.Location = new System.Drawing.Point(269, 149);
+            this.linkSignUp.Name = "linkSignUp";
+            this.linkSignUp.Size = new System.Drawing.Size(54, 20);
+            this.linkSignUp.TabIndex = 39;
+            this.linkSignUp.TabStop = true;
+            this.linkSignUp.Text = "Log In!";
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
+            this.label11.Location = new System.Drawing.Point(87, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 20);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Have an account already?";
             // 
             // label10
             // 
@@ -302,6 +333,7 @@ namespace ClinicaPOO
             this.txtDUI.Text = "Type here...";
             this.txtDUI.Click += new System.EventHandler(this.txtDUI_Click);
             this.txtDUI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDUI_KeyPress);
+            this.txtDUI.Leave += new System.EventHandler(this.txtDUI_Leave);
             // 
             // panel6
             // 
@@ -406,6 +438,7 @@ namespace ClinicaPOO
             this.txtEmail.Text = "Type here...";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // panel4
             // 
@@ -477,5 +510,7 @@ namespace ClinicaPOO
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.LinkLabel linkSignUp;
+        private System.Windows.Forms.Label label11;
     }
 }

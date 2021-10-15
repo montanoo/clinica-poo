@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 
 namespace ClinicaPOO
 {
@@ -51,9 +53,9 @@ namespace ClinicaPOO
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            /*Login Gotologin=new Login();
+            Login Gotologin=new Login();
               Gotologin.Show();
-              this.Close();*/
+              this.Close();
             
         }
 
@@ -81,6 +83,9 @@ namespace ClinicaPOO
                     InsertInto();
                     insertcommand.ExecuteNonQuery();
                     connector.Close();
+                    Menu ShowMenu=new Menu();
+                     ShowMenu.Show();
+                     this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -236,13 +241,31 @@ namespace ClinicaPOO
                 }
             }
         }
+        public static bool validdui(string pdui)
+        {
+           
+            string duistring = "([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])-([0-9])$";
+   
+            if (Regex.IsMatch(pdui, duistring))
+            {
+                if (Regex.Replace(pdui, duistring, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private void txtDUI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsNumber(e.KeyChar)&&e.KeyChar != (char)Keys.Back&& e.KeyChar != (char)Keys.Enter)
-            {
-                e.Handled = true;
-            }
+
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 if (txtPhone.Text == "Type here...")
@@ -262,6 +285,63 @@ namespace ClinicaPOO
             if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login Gotologin=new Login();
+             Gotologin.Show();
+             this.Close();
+        }
+
+        private void txtDUI_Leave(object sender, EventArgs e)
+        {
+            if (validdui(txtDUI.Text))
+            {
+                //si es correcto no debe hacer nada
+            }
+            else
+            {
+                MessageBox.Show("Invalid DUI");
+                txtDUI.SelectAll(); //selecciona todo lo de la casilla
+                txtDUI.Focus(); //se posiciona ahí de nuevo
+            }
+
+        }
+        public static bool validemail(string pemail)
+        {
+            
+            string expression = @"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])$";
+         
+            if (Regex.IsMatch(pemail, expression))
+            {
+             if (Regex.Replace(pemail, expression, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (validemail(txtEmail.Text))
+            {
+             
+            }
+            else
+            {
+                MessageBox.Show("Invalid email");
+                txtEmail.SelectAll();
+                txtEmail.Focus(); 
             }
         }
     }
