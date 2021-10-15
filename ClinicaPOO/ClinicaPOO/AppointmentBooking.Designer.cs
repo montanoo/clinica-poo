@@ -31,8 +31,6 @@ namespace ClinicaPOO
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentBooking));
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Reason = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,41 +59,18 @@ namespace ClinicaPOO
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(64, 121);
+            this.button1.Location = new System.Drawing.Point(53, 192);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 87);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(401, 180);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 65);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "REASON";
-            // 
-            // Reason
-            // 
-            this.Reason.BackColor = System.Drawing.Color.White;
-            this.Reason.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Reason.Font = new System.Drawing.Font("Fjalla One", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Reason.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.Reason.Location = new System.Drawing.Point(230, 265);
-            this.Reason.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Reason.Name = "Reason";
-            this.Reason.Size = new System.Drawing.Size(556, 56);
-            this.Reason.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(400, 341);
+            this.label2.Location = new System.Drawing.Point(400, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 65);
@@ -106,7 +81,7 @@ namespace ClinicaPOO
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(438, 685);
+            this.label3.Location = new System.Drawing.Point(438, 646);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 65);
@@ -117,7 +92,7 @@ namespace ClinicaPOO
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(394, 510);
+            this.label4.Location = new System.Drawing.Point(394, 419);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(228, 65);
@@ -128,26 +103,26 @@ namespace ClinicaPOO
             // 
             this.dentistcmb.BackColor = System.Drawing.Color.White;
             this.dentistcmb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.dentistcmb.Font = new System.Drawing.Font("Fjalla One", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dentistcmb.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.dentistcmb.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dentistcmb.ForeColor = System.Drawing.Color.DarkGray;
             this.dentistcmb.FormattingEnabled = true;
-            this.dentistcmb.Location = new System.Drawing.Point(231, 427);
+            this.dentistcmb.Location = new System.Drawing.Point(231, 309);
             this.dentistcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dentistcmb.Name = "dentistcmb";
-            this.dentistcmb.Size = new System.Drawing.Size(555, 58);
+            this.dentistcmb.Size = new System.Drawing.Size(555, 62);
             this.dentistcmb.TabIndex = 6;
             // 
             // methodcmb
             // 
             this.methodcmb.BackColor = System.Drawing.Color.White;
             this.methodcmb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.methodcmb.Font = new System.Drawing.Font("Fjalla One", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.methodcmb.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.methodcmb.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.methodcmb.ForeColor = System.Drawing.Color.DarkGray;
             this.methodcmb.FormattingEnabled = true;
-            this.methodcmb.Location = new System.Drawing.Point(231, 596);
+            this.methodcmb.Location = new System.Drawing.Point(231, 536);
             this.methodcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.methodcmb.Name = "methodcmb";
-            this.methodcmb.Size = new System.Drawing.Size(555, 58);
+            this.methodcmb.Size = new System.Drawing.Size(555, 62);
             this.methodcmb.TabIndex = 7;
             this.methodcmb.SelectedIndexChanged += new System.EventHandler(this.methodcmb_SelectedIndexChanged);
             // 
@@ -156,7 +131,7 @@ namespace ClinicaPOO
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Forte", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(231, 765);
+            this.dateTimePicker1.Location = new System.Drawing.Point(231, 763);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(555, 66);
@@ -167,7 +142,7 @@ namespace ClinicaPOO
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(898, 289);
+            this.label5.Location = new System.Drawing.Point(938, 265);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 65);
@@ -178,7 +153,7 @@ namespace ClinicaPOO
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(845, 357);
+            this.pictureBox1.Location = new System.Drawing.Point(885, 333);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(261, 82);
@@ -190,12 +165,12 @@ namespace ClinicaPOO
             // 
             this.price.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.price.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.price.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.price.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.price.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.price.Location = new System.Drawing.Point(918, 372);
+            this.price.Location = new System.Drawing.Point(934, 346);
             this.price.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(115, 54);
+            this.price.Size = new System.Drawing.Size(175, 54);
             this.price.TabIndex = 11;
             this.price.Text = "$0.00";
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -205,7 +180,7 @@ namespace ClinicaPOO
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(894, 598);
+            this.label6.Location = new System.Drawing.Point(934, 574);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 65);
@@ -216,7 +191,7 @@ namespace ClinicaPOO
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(845, 666);
+            this.pictureBox2.Location = new System.Drawing.Point(885, 642);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(261, 82);
@@ -227,7 +202,7 @@ namespace ClinicaPOO
             // hourcmbx
             // 
             this.hourcmbx.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.hourcmbx.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hourcmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.hourcmbx.ForeColor = System.Drawing.SystemColors.GrayText;
             this.hourcmbx.FormattingEnabled = true;
             this.hourcmbx.Items.AddRange(new object[] {
@@ -236,7 +211,7 @@ namespace ClinicaPOO
             "15:00",
             "16:30",
             "18:00"});
-            this.hourcmbx.Location = new System.Drawing.Point(866, 678);
+            this.hourcmbx.Location = new System.Drawing.Point(906, 654);
             this.hourcmbx.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.hourcmbx.Name = "hourcmbx";
             this.hourcmbx.Size = new System.Drawing.Size(218, 62);
@@ -263,10 +238,10 @@ namespace ClinicaPOO
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1072, 88);
+            this.pictureBox6.Location = new System.Drawing.Point(13, 751);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(301, 297);
+            this.pictureBox6.Size = new System.Drawing.Size(204, 197);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -276,7 +251,7 @@ namespace ClinicaPOO
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(921, 751);
+            this.label7.Location = new System.Drawing.Point(961, 727);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 38);
@@ -302,8 +277,6 @@ namespace ClinicaPOO
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Reason);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.backbtn);
             this.Controls.Add(this.pictureBox6);
@@ -314,6 +287,7 @@ namespace ClinicaPOO
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "AppointmentBooking";
             this.Text = "Appointment booking";
+            this.Load += new System.EventHandler(this.AppointmentBooking_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -325,8 +299,6 @@ namespace ClinicaPOO
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Reason;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
