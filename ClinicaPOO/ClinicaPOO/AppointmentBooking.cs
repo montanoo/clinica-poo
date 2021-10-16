@@ -15,6 +15,7 @@ namespace ClinicaPOO
     public partial class AppointmentBooking : Form
     {
         public string userEmailValue;
+        public int userId;
         private SqlDataAdapter da1;
         private SqlDataReader dr1;
         public AppointmentBooking(string userEmail)
@@ -26,7 +27,7 @@ namespace ClinicaPOO
             dateTimePicker1.MinDate = fechaactual;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-
+            userEmailValue = userEmail;
 
             try
             {
@@ -127,28 +128,26 @@ namespace ClinicaPOO
 
         private void InsertInto()
         {
-            try
-            {
                 Connection sqlCnn = new Connection();
                 sqlCnn.Connect();
                 string connectString = sqlCnn.WindowsAuth;
                 SqlConnection sqlConnect = new SqlConnection(connectString);
                 string insertappointment;
-                insertappointment = "INSERT INTO appointments (dentist_id, appointment_time, method_id)";
-                insertappointment += "VALUES (@pdentist_id, @pappointment_time, @pmethod_id)";
+                insertappointment = "INSERT INTO appointments (dentist_id, patient_id, appointment_time, method_id)";
+                insertappointment += "VALUES (@pdentist_id, @ppatient_id,@pappointment_time, @pmethod_id)";
                 sqlConnect.Open();
                 
-                int userId;
-                SqlParameter prm1 = new SqlParameter("id", SqlDbType.Int);
-                string selection = "SELECT id FROM patient WHERE email = 'userId'"; // Reemplazado por una variable.
+                SqlParameter prm1 = new SqlParameter("id", SqlDbType.VarChar);
+                string selection = $"SELECT id FROM patient WHERE email = '{userEmailValue}'";
                 da1 = new SqlDataAdapter(selection, sqlConnect);
-                prm1.Value = "userId";
+                prm1.Value = $"{userEmailValue}";
                 da1.SelectCommand.Parameters.Add(prm1);
                 dr1 = da1.SelectCommand.ExecuteReader();
 
                 while (dr1.Read())
                 {
                     userId = int.Parse(dr1["id"].ToString());
+                    MessageBox.Show(userId.ToString());
                 }
 
                 SqlCommand insertcommand = new SqlCommand(insertappointment, sqlConnect);
@@ -178,16 +177,14 @@ namespace ClinicaPOO
                     }
                 }
                 insertcommand.Parameters["@pmethod_id"].Value = pmethod_id;
-                sqlConnect.Close();
+                insertcommand.Parameters.Add(new SqlParameter("@ppatient_id", SqlDbType.Int));
+                insertcommand.Parameters["@ppatient_id"].Value = userId;
+
+            sqlConnect.Close();
                 sqlConnect.Open();
 
                 insertcommand.ExecuteNonQuery();
                 sqlConnect.Close();
-            }
-            catch(Exception errorFound)
-            {
-                MessageBox.Show("There was an error: " + errorFound.Message);
-            }
         }
 
         public class Dentist
