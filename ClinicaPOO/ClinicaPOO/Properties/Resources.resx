@@ -205,5 +205,28 @@
   </data>
   <data name="watch-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\watch-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HD-wallpaper-plain-purple-background-purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HD-wallpaper-plain-purple-background-purple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appointment 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appointment 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pharmacy 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pharmacy 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pill 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pill 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dentist (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dentist (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipboard 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
