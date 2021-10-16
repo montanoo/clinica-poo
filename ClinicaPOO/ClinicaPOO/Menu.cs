@@ -12,13 +12,19 @@ namespace ClinicaPOO
 {
     public partial class Menu : Form
     {
-        public Menu()
+        public Menu(string userEmail)
         {
             InitializeComponent();
         }
 
         private void btnBookApp_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnListApp_Click(object sender, EventArgs e)
+        {
+            FormListOfAppointments listOfAppointments = new FormListOfAppointments();
 
         }
     }

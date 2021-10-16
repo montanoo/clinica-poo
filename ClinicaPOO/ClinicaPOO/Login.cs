@@ -46,7 +46,7 @@ namespace ClinicaPOO
                 {
                     windowsAuthConn.Close();
                     MessageBox.Show("User is correct");
-                    Menu enterMenu = new Menu();
+                    Menu enterMenu = new Menu(txtEmail.Text);
                     enterMenu.Show();
                     this.Hide();
                 }
@@ -94,6 +94,11 @@ namespace ClinicaPOO
             SignUp newUser = new SignUp();
             newUser.Show();
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

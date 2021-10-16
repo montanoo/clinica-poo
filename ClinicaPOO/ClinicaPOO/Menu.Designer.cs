@@ -73,6 +73,7 @@ namespace ClinicaPOO
             this.btnListApp.Size = new System.Drawing.Size(212, 211);
             this.btnListApp.TabIndex = 1;
             this.btnListApp.TabStop = false;
+            this.btnListApp.Click += new System.EventHandler(this.btnListApp_Click);
             // 
             // btnBookApp
             // 
