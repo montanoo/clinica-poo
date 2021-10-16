@@ -17,6 +17,5 @@ namespace ClinicaPOO
             ///Andrea Velásquez
             InitializeComponent();
         }
-
     }
 }
