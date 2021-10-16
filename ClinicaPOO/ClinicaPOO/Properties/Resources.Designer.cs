@@ -216,6 +216,9 @@ namespace ClinicaPOO.Properties {
         internal static System.Drawing.Bitmap watch_password {
             get {
                 object obj = ResourceManager.GetObject("watch-password", resourceCulture);
+        internal static System.Drawing.Bitmap log_in {
+            get {
+                object obj = ResourceManager.GetObject("log-in", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +229,9 @@ namespace ClinicaPOO.Properties {
         internal static System.Drawing.Bitmap Welcome_to_the_clinic {
             get {
                 object obj = ResourceManager.GetObject("Welcome to the clinic", resourceCulture);
+        internal static System.Drawing.Bitmap Sign_Up_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Sign Up Screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
