@@ -141,7 +141,7 @@ namespace ClinicaPOO
                 int userId;
                 SqlParameter prm1 = new SqlParameter("id", SqlDbType.Int);
                 string selection = "SELECT id FROM patient WHERE email = 'userId'"; // Reemplazado por una variable.
-                da1 = new SqlDataAdapter(selection, connectString);
+                da1 = new SqlDataAdapter(selection, sqlConnect);
                 prm1.Value = "userId";
                 da1.SelectCommand.Parameters.Add(prm1);
                 dr1 = da1.SelectCommand.ExecuteReader();
@@ -178,6 +178,8 @@ namespace ClinicaPOO
                     }
                 }
                 insertcommand.Parameters["@pmethod_id"].Value = pmethod_id;
+                sqlConnect.Close();
+                sqlConnect.Open();
 
                 insertcommand.ExecuteNonQuery();
                 sqlConnect.Close();
