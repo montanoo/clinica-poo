@@ -168,7 +168,7 @@ namespace ClinicaPOO
             this.price.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.price.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.price.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.price.Location = new System.Drawing.Point(934, 346);
+            this.price.Location = new System.Drawing.Point(923, 351);
             this.price.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(175, 45);

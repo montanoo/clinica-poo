@@ -157,6 +157,16 @@ namespace ClinicaPOO
             foreignk3 += "ADD CONSTRAINT FK_dentiststatus ";
             foreignk3 += "FOREIGN KEY (dentist_id) REFERENCES dentist(id);";
 
+            string insertdentist = "USE ClinicaPOO " +
+                "INSERT INTO dentist([name]) " +
+                "VALUES('Dylan Medina'), " +
+                "('Irma Boyle');";
+
+            string insertmethods = "USE ClinicaPOO " +
+                "INSERT INTO methods([name], price) " +
+                "VALUES('Teeth extraction', 250.00), " +
+                "('Fillings',125.00);";
+
             SqlCommand cmd = new SqlCommand(createDB, connectionString);
             SqlCommand cmd1 = new SqlCommand(appointmentsTable, connectionString);
             SqlCommand cmd2 = new SqlCommand(patientTable, connectionString);
@@ -168,6 +178,9 @@ namespace ClinicaPOO
             SqlCommand cmd8 = new SqlCommand(foreignk1, connectionString);
             SqlCommand cmd9 = new SqlCommand(foreignk2, connectionString);
             SqlCommand cmd10 = new SqlCommand(foreignk3, connectionString);
+            SqlCommand cmd11 = new SqlCommand(insertdentist, connectionString);
+            SqlCommand cmd12 = new SqlCommand(insertmethods, connectionString);
+
 
             try
             {
@@ -183,6 +196,8 @@ namespace ClinicaPOO
                 cmd8.ExecuteNonQuery();
                 cmd9.ExecuteNonQuery();
                 cmd10.ExecuteNonQuery();
+                cmd11.ExecuteNonQuery();
+                cmd12.ExecuteNonQuery();
 
                 connectionString.Close();
             }

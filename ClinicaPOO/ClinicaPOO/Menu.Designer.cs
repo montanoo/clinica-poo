@@ -29,6 +29,7 @@ namespace ClinicaPOO
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.barramenu = new System.Windows.Forms.PictureBox();
             this.btnListApp = new System.Windows.Forms.PictureBox();
             this.btnBookApp = new System.Windows.Forms.PictureBox();
@@ -248,6 +249,7 @@ namespace ClinicaPOO
             this.Controls.Add(this.btnBookApp);
             this.Controls.Add(this.btnListApp);
             this.Controls.Add(this.barramenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Dentist\'s\r\nInformation";

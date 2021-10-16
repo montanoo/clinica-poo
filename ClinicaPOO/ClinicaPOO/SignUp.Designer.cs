@@ -469,6 +469,7 @@ namespace ClinicaPOO
             this.Controls.Add(this.backToLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUp";
             this.Text = "SignUp";
             ((System.ComponentModel.ISupportInitialize)(this.backToLogin)).EndInit();

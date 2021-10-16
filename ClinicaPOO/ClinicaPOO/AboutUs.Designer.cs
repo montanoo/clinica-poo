@@ -146,6 +146,7 @@ namespace ClinicaPOO
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutUs";
             this.Text = "AboutUs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AboutUs_FormClosed);
