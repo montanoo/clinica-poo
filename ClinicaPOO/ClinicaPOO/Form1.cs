@@ -14,7 +14,7 @@ namespace ClinicaPOO
     {
         public Form1()
         {
-            ///Andrea Velásquez
+           
             InitializeComponent();
         }
     }
