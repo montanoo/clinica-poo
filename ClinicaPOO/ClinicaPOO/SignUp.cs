@@ -83,9 +83,9 @@ namespace ClinicaPOO
                     InsertInto();
                     insertcommand.ExecuteNonQuery();
                     connector.Close();
-                    Menu ShowMenu=new Menu();
-                     ShowMenu.Show();
-                     this.Close();
+                    Login showLogin = new Login();
+                    showLogin.Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {

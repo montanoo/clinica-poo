@@ -182,6 +182,7 @@ namespace ClinicaPOO
             this.linkSignUp.TabIndex = 17;
             this.linkSignUp.TabStop = true;
             this.linkSignUp.Text = "Sign Up for free!";
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // panel3
             // 

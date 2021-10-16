@@ -46,6 +46,9 @@ namespace ClinicaPOO
                 {
                     windowsAuthConn.Close();
                     MessageBox.Show("User is correct");
+                    Menu enterMenu = new Menu();
+                    enterMenu.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -84,6 +87,13 @@ namespace ClinicaPOO
                 txtPassword.UseSystemPasswordChar = false;
             else
                 txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUp newUser = new SignUp();
+            newUser.Show();
+            this.Hide();
         }
     }
 }
