@@ -56,7 +56,7 @@ namespace ClinicaPOO
             this.panel1.Location = new System.Drawing.Point(-6, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1295, 316);
+            this.panel1.Size = new System.Drawing.Size(1427, 316);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox2
@@ -64,7 +64,7 @@ namespace ClinicaPOO
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1009, 160);
+            this.pictureBox2.Location = new System.Drawing.Point(1082, 158);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(73, 69);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@ namespace ClinicaPOO
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSearch.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.Location = new System.Drawing.Point(267, 197);
+            this.txtSearch.Location = new System.Drawing.Point(340, 195);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(734, 32);
@@ -105,7 +105,7 @@ namespace ClinicaPOO
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
             this.panel2.ForeColor = System.Drawing.Color.BlueViolet;
-            this.panel2.Location = new System.Drawing.Point(267, 240);
+            this.panel2.Location = new System.Drawing.Point(340, 238);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 7);
@@ -116,7 +116,7 @@ namespace ClinicaPOO
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(400, 113);
+            this.label2.Location = new System.Drawing.Point(473, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(568, 32);
             this.label2.TabIndex = 1;
@@ -127,7 +127,7 @@ namespace ClinicaPOO
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(411, 53);
+            this.label1.Location = new System.Drawing.Point(484, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(537, 60);
             this.label1.TabIndex = 0;
@@ -140,7 +140,7 @@ namespace ClinicaPOO
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
-            this.dataGridView1.Location = new System.Drawing.Point(160, 319);
+            this.dataGridView1.Location = new System.Drawing.Point(247, 320);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 70;
@@ -154,7 +154,7 @@ namespace ClinicaPOO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1285, 749);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

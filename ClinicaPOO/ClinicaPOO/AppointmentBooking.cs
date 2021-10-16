@@ -26,7 +26,7 @@ namespace ClinicaPOO
             var fechaactual = DateTime.Now;
             dateTimePicker1.MinDate = fechaactual;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             userEmailValue = userEmail;
 
             try
@@ -123,11 +123,16 @@ namespace ClinicaPOO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InsertInto();
+            if (dentistcmb.SelectedIndex == -1 || methodcmb.SelectedIndex == -1 || hourcmbx.SelectedIndex == -1)
+                MessageBox.Show("You must complete all data!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            else 
+                InsertInto();
         }
 
         private void InsertInto()
         {
+            try
+            {
                 Connection sqlCnn = new Connection();
                 sqlCnn.Connect();
                 string connectString = sqlCnn.WindowsAuth;
@@ -136,7 +141,7 @@ namespace ClinicaPOO
                 insertappointment = "INSERT INTO appointments (dentist_id, patient_id, appointment_time, method_id)";
                 insertappointment += "VALUES (@pdentist_id, @ppatient_id,@pappointment_time, @pmethod_id)";
                 sqlConnect.Open();
-                
+
                 SqlParameter prm1 = new SqlParameter("id", SqlDbType.VarChar);
                 string selection = $"SELECT id FROM patient WHERE email = '{userEmailValue}'";
                 da1 = new SqlDataAdapter(selection, sqlConnect);
@@ -147,7 +152,6 @@ namespace ClinicaPOO
                 while (dr1.Read())
                 {
                     userId = int.Parse(dr1["id"].ToString());
-                    MessageBox.Show(userId.ToString());
                 }
 
                 SqlCommand insertcommand = new SqlCommand(insertappointment, sqlConnect);
@@ -162,10 +166,14 @@ namespace ClinicaPOO
                 }
                 insertcommand.Parameters["@pdentist_id"].Value = pdentist_id;
 
-                insertcommand.Parameters.Add(new SqlParameter("@pappointment_time", SqlDbType.Date));
-                DateTime date = new DateTime();
-                date = DateTime.ParseExact(dateTimePicker1.Text + " " + hourcmbx.Text, "dd-MM-yyyy HH:mm", null);
-                insertcommand.Parameters["@pappointment_time"].Value = date;
+                DateTime appointmentDate = new DateTime();
+                appointmentDate = DateTime.ParseExact(dateTimePicker1.Text + " " + hourcmbx.Text, "yyyy-MM-dd HH:mm", null);
+
+                insertcommand.Parameters.Add(new SqlParameter("@pappointment_time", SqlDbType.DateTime));
+                string chopper = $"{dateTimePicker1.Text} {hourcmbx.Text}";
+
+                string sqlFormattedDate = appointmentDate.ToString("yyyy-MM-dd HH:mm:ss");
+                insertcommand.Parameters["@pappointment_time"].Value = sqlFormattedDate;
 
                 insertcommand.Parameters.Add(new SqlParameter("@pmethod_id", SqlDbType.Int));
                 int pmethod_id = -1;
@@ -180,11 +188,17 @@ namespace ClinicaPOO
                 insertcommand.Parameters.Add(new SqlParameter("@ppatient_id", SqlDbType.Int));
                 insertcommand.Parameters["@ppatient_id"].Value = userId;
 
-            sqlConnect.Close();
+                sqlConnect.Close();
                 sqlConnect.Open();
 
                 insertcommand.ExecuteNonQuery();
                 sqlConnect.Close();
+                MessageBox.Show("Your appointment has been added succesfully. Remember to be punctual", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception errorFound)
+            {
+                MessageBox.Show($"There was an error: {errorFound.Message}");
+            }
         }
 
         public class Dentist
@@ -203,41 +217,16 @@ namespace ClinicaPOO
         public static List<Dentist> dentistList = new List<Dentist>();
         public static List<Methods> methodsList = new List<Methods>();
 
-        private void AppointmentBooking_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dentistcmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hourcmbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AppointmentBooking_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             Menu returnToMenu = new Menu(userEmailValue);
             returnToMenu.Show();
             this.Hide();
+        }
+
+        private void AppointmentBooking_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

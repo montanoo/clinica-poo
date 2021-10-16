@@ -264,7 +264,7 @@ namespace ClinicaPOO
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1418, 968);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.hourcmbx);
             this.Controls.Add(this.pictureBox2);
@@ -288,6 +288,7 @@ namespace ClinicaPOO
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "AppointmentBooking";
             this.Text = "Appointment booking";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppointmentBooking_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

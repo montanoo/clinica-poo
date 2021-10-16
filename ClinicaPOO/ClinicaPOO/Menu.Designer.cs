@@ -57,7 +57,7 @@ namespace ClinicaPOO
             this.barramenu.BackgroundImage = global::ClinicaPOO.Properties.Resources.barra;
             this.barramenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.barramenu.Location = new System.Drawing.Point(0, -2);
-            this.barramenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barramenu.Margin = new System.Windows.Forms.Padding(2);
             this.barramenu.Name = "barramenu";
             this.barramenu.Size = new System.Drawing.Size(1138, 54);
             this.barramenu.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace ClinicaPOO
             this.btnListApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnListApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListApp.Location = new System.Drawing.Point(471, 222);
-            this.btnListApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListApp.Margin = new System.Windows.Forms.Padding(2);
             this.btnListApp.Name = "btnListApp";
             this.btnListApp.Size = new System.Drawing.Size(170, 169);
             this.btnListApp.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace ClinicaPOO
             this.btnBookApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBookApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBookApp.Location = new System.Drawing.Point(158, 242);
-            this.btnBookApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBookApp.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookApp.Name = "btnBookApp";
             this.btnBookApp.Size = new System.Drawing.Size(134, 134);
             this.btnBookApp.TabIndex = 2;
@@ -98,7 +98,7 @@ namespace ClinicaPOO
             this.btnDentists.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDentists.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDentists.Location = new System.Drawing.Point(828, 242);
-            this.btnDentists.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDentists.Margin = new System.Windows.Forms.Padding(2);
             this.btnDentists.Name = "btnDentists";
             this.btnDentists.Size = new System.Drawing.Size(134, 134);
             this.btnDentists.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace ClinicaPOO
             this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfile.Location = new System.Drawing.Point(158, 538);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(134, 134);
             this.btnProfile.TabIndex = 4;
@@ -124,7 +124,7 @@ namespace ClinicaPOO
             this.btnPharmacy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPharmacy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPharmacy.Location = new System.Drawing.Point(482, 533);
-            this.btnPharmacy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPharmacy.Margin = new System.Windows.Forms.Padding(2);
             this.btnPharmacy.Name = "btnPharmacy";
             this.btnPharmacy.Size = new System.Drawing.Size(140, 140);
             this.btnPharmacy.TabIndex = 5;
@@ -137,7 +137,7 @@ namespace ClinicaPOO
             this.btnMedicines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMedicines.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMedicines.Location = new System.Drawing.Point(828, 533);
-            this.btnMedicines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedicines.Margin = new System.Windows.Forms.Padding(2);
             this.btnMedicines.Name = "btnMedicines";
             this.btnMedicines.Size = new System.Drawing.Size(140, 140);
             this.btnMedicines.TabIndex = 6;
@@ -247,9 +247,10 @@ namespace ClinicaPOO
             this.Controls.Add(this.btnBookApp);
             this.Controls.Add(this.btnListApp);
             this.Controls.Add(this.barramenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Dentist\'s\r\nInformation";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.barramenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnListApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBookApp)).EndInit();

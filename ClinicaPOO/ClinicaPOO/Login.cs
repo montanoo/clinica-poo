@@ -45,14 +45,13 @@ namespace ClinicaPOO
                 if (readData.Read())
                 {
                     windowsAuthConn.Close();
-                    MessageBox.Show("User is correct");
                     Menu enterMenu = new Menu(txtEmail.Text);
                     enterMenu.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Wrong user or password.");
+                    MessageBox.Show("Wrong user or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
