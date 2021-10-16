@@ -136,9 +136,8 @@ namespace ClinicaPOO
                 string insertappointment;
                 insertappointment = "INSERT INTO appointments (dentist_id, appointment_time, method_id)";
                 insertappointment += "VALUES (@pdentist_id, @pappointment_time, @pmethod_id)";
-                //   insertappointment += "";
-                //     commandJOIN += $"WHERE patient.email='{userEmailValue}'";
                 sqlConnect.Open();
+                
                 int userId;
                 SqlParameter prm1 = new SqlParameter("id", SqlDbType.Int);
                 string selection = "SELECT id FROM patient WHERE email = 'userId'"; // Reemplazado por una variable.
@@ -208,63 +207,6 @@ namespace ClinicaPOO
         private void AppointmentBooking_Load(object sender, EventArgs e)
         {
 
-          /*  try
-            {
-                Connection sqlVariables = new Connection();
-                sqlVariables.Connect();
-                string connectString = sqlVariables.WindowsAuth;
-                SqlConnection windowsAuthConn = new SqlConnection(connectString);
-                windowsAuthConn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM dentist", windowsAuthConn);
-                SqlDataReader readData = command.ExecuteReader();
-
-
-                while (readData.Read())
-                {
-                    Dentist dentist = new Dentist()
-                    {
-                        id = int.Parse(readData["id"].ToString()),
-                        name = readData["name"].ToString()
-                    };
-                    dentistcmb.Items.Add(dentist.name);
-                    dentistList.Add(dentist);
-                }
-                windowsAuthConn.Close();
-            }
-            catch (Exception errorHappened)
-            {
-                MessageBox.Show($"There was an error: {errorHappened.Message}");
-            }
-
-
-            try
-            {
-                Connection sqlVariables2 = new Connection();
-                sqlVariables2.Connect();
-                string connectString2 = sqlVariables2.WindowsAuth;
-                SqlConnection windowsAuthConn2 = new SqlConnection(connectString2);
-                windowsAuthConn2.Open();
-                SqlCommand command2 = new SqlCommand("SELECT * FROM methods", windowsAuthConn2);
-                SqlDataReader readData2 = command2.ExecuteReader();
-
-
-                while (readData2.Read())
-                {
-                    Methods methods = new Methods()
-                    {
-                        id = int.Parse(readData2["id"].ToString()),
-                        name = readData2["name"].ToString()
-                    };
-                    methodcmb.Items.Add(methods.name);
-                    methodsList.Add(methods);
-                }
-                windowsAuthConn2.Close();
-            }
-
-            catch (Exception errorHappened)
-            {
-                MessageBox.Show($"There was an error: {errorHappened.Message}");
-            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -290,6 +232,13 @@ namespace ClinicaPOO
         private void AppointmentBooking_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Menu returnToMenu = new Menu(userEmailValue);
+            returnToMenu.Show();
+            this.Hide();
         }
     }
 }

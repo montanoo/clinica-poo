@@ -65,6 +65,7 @@ namespace ClinicaPOO
             this.button1.Size = new System.Drawing.Size(106, 87);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label2
             // 
@@ -73,7 +74,7 @@ namespace ClinicaPOO
             this.label2.Location = new System.Drawing.Point(400, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 65);
+            this.label2.Size = new System.Drawing.Size(182, 54);
             this.label2.TabIndex = 3;
             this.label2.Text = "DENTIST";
             // 
@@ -84,7 +85,7 @@ namespace ClinicaPOO
             this.label3.Location = new System.Drawing.Point(438, 646);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 65);
+            this.label3.Size = new System.Drawing.Size(118, 54);
             this.label3.TabIndex = 4;
             this.label3.Text = "DATE";
             // 
@@ -95,7 +96,7 @@ namespace ClinicaPOO
             this.label4.Location = new System.Drawing.Point(394, 419);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 65);
+            this.label4.Size = new System.Drawing.Size(191, 54);
             this.label4.TabIndex = 5;
             this.label4.Text = "METHOD";
             // 
@@ -109,7 +110,7 @@ namespace ClinicaPOO
             this.dentistcmb.Location = new System.Drawing.Point(231, 309);
             this.dentistcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dentistcmb.Name = "dentistcmb";
-            this.dentistcmb.Size = new System.Drawing.Size(555, 62);
+            this.dentistcmb.Size = new System.Drawing.Size(555, 53);
             this.dentistcmb.TabIndex = 6;
             // 
             // methodcmb
@@ -122,7 +123,7 @@ namespace ClinicaPOO
             this.methodcmb.Location = new System.Drawing.Point(231, 536);
             this.methodcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.methodcmb.Name = "methodcmb";
-            this.methodcmb.Size = new System.Drawing.Size(555, 62);
+            this.methodcmb.Size = new System.Drawing.Size(555, 53);
             this.methodcmb.TabIndex = 7;
             this.methodcmb.SelectedIndexChanged += new System.EventHandler(this.methodcmb_SelectedIndexChanged);
             // 
@@ -134,7 +135,7 @@ namespace ClinicaPOO
             this.dateTimePicker1.Location = new System.Drawing.Point(231, 763);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(555, 66);
+            this.dateTimePicker1.Size = new System.Drawing.Size(555, 56);
             this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -145,7 +146,7 @@ namespace ClinicaPOO
             this.label5.Location = new System.Drawing.Point(938, 265);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 65);
+            this.label5.Size = new System.Drawing.Size(129, 54);
             this.label5.TabIndex = 9;
             this.label5.Text = "PRICE";
             // 
@@ -170,7 +171,7 @@ namespace ClinicaPOO
             this.price.Location = new System.Drawing.Point(934, 346);
             this.price.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(175, 54);
+            this.price.Size = new System.Drawing.Size(175, 45);
             this.price.TabIndex = 11;
             this.price.Text = "$0.00";
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -183,7 +184,7 @@ namespace ClinicaPOO
             this.label6.Location = new System.Drawing.Point(934, 574);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 65);
+            this.label6.Size = new System.Drawing.Size(135, 54);
             this.label6.TabIndex = 12;
             this.label6.Text = "HOUR";
             // 
@@ -214,7 +215,7 @@ namespace ClinicaPOO
             this.hourcmbx.Location = new System.Drawing.Point(906, 654);
             this.hourcmbx.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.hourcmbx.Name = "hourcmbx";
-            this.hourcmbx.Size = new System.Drawing.Size(218, 62);
+            this.hourcmbx.Size = new System.Drawing.Size(218, 53);
             this.hourcmbx.TabIndex = 14;
             this.hourcmbx.Text = "00:00";
             // 
@@ -254,13 +255,13 @@ namespace ClinicaPOO
             this.label7.Location = new System.Drawing.Point(961, 727);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 38);
+            this.label7.Size = new System.Drawing.Size(93, 32);
             this.label7.TabIndex = 20;
             this.label7.Text = "(24 hrs)";
             // 
             // AppointmentBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(27F, 65F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1418, 968);
@@ -287,7 +288,6 @@ namespace ClinicaPOO
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "AppointmentBooking";
             this.Text = "Appointment booking";
-            this.Load += new System.EventHandler(this.AppointmentBooking_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

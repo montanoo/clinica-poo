@@ -12,20 +12,25 @@ namespace ClinicaPOO
 {
     public partial class Menu : Form
     {
-        public Menu(string userEmail)
+        public string userEmailData;
+        public Menu(string email)
         {
             InitializeComponent();
+            userEmailData = email;
         }
 
         private void btnBookApp_Click(object sender, EventArgs e)
         {
-            
+            AppointmentBooking bookAnAppointment = new AppointmentBooking(userEmailData);
+            bookAnAppointment.Show();
+            this.Hide();
         }
 
         private void btnListApp_Click(object sender, EventArgs e)
         {
-            FormListOfAppointments listOfAppointments = new FormListOfAppointments();
-
+            FormListOfAppointments appointmentList = new FormListOfAppointments(userEmailData);
+            appointmentList.Show();
+            this.Hide();
         }
     }
 }
