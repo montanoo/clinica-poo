@@ -263,6 +263,7 @@ namespace ClinicaPOO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.label7);
