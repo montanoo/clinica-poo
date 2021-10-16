@@ -10,12 +10,19 @@ using System.Windows.Forms;
 
 namespace ClinicaPOO
 {
-    public partial class Form1 : Form
+    public partial class formvacio : Form
     {
-        public Form1()
+        public formvacio()
         {
            
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AppointmentBooking formu = new AppointmentBooking(textBox1.Text);
+            formu.Show();
+            this.Hide();
         }
     }
 }
