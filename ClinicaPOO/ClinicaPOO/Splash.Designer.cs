@@ -85,7 +85,7 @@ namespace ClinicaPOO
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-6, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 645);
+            this.panel1.Size = new System.Drawing.Size(1069, 645);
             this.panel1.TabIndex = 8;
             // 
             // superiorBar
@@ -162,7 +162,9 @@ namespace ClinicaPOO
             this.ClientSize = new System.Drawing.Size(1062, 634);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Splash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Splash_FormClosed);
             this.panel1.ResumeLayout(false);
