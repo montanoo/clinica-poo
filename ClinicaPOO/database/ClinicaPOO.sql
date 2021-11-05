@@ -1,4 +1,4 @@
--- Query actualizada hasta el 50% para creación de la base de datos 
+-- Query normalizada
 -- Integrantes: 
 --	Fernando Josué Montano González. MG210111 | Andrea Guadalupe Velásquez Joyar. VJ210576 |
 --	Kallahan Andrea Salas Bojórquez. SB210537 | Ivania María Lebrón Flores. LF212591 | 
@@ -80,50 +80,59 @@ GO
 CREATE TABLE billing (
     id int IDENTITY(1,1) NOT NULL, --(PK)
     patient_id int,
-    appointment_id int,
     method_id int,
     medicine_id int,
-    quantity int,
+    medicine_quantity int,
 	total float,
     CONSTRAINT PK_billing_id PRIMARY KEY (id)
 )
 GO
 
--- | Normalización (Foreign Keys) |
+-- | Normalización (Foreign Keys & PK) |
 ALTER TABLE patient
 ADD CONSTRAINT FK_patient_user_id FOREIGN KEY ([user_id]) REFERENCES [user](id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE appointments 
 ADD CONSTRAINT FK_dentist_id FOREIGN KEY (dentist_id) REFERENCES dentist(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE appointments
 ADD CONSTRAINT FK_patient_id FOREIGN KEY (patient_id) REFERENCES patient(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE appointments
 ADD CONSTRAINT FK_method_id FOREIGN KEY (method_id) REFERENCES methods(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE billing
 ADD CONSTRAINT FK_billing_patient_id FOREIGN KEY (patient_id) REFERENCES patient(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE billing
 ADD CONSTRAINT FK_billing_method_id FOREIGN KEY (method_id) REFERENCES methods(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
-ALTER TABLE billing
-ADD CONSTRAINT FK_billing_appointment_id FOREIGN KEY (appointment_id) REFERENCES appointments(id)
-GO
 
 ALTER TABLE billing
 ADD CONSTRAINT FK_billing_medicine_id FOREIGN KEY (medicine_id) REFERENCES inventory(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 -- | Inserts |
-
 INSERT INTO [user] (username, [password], [role_id]) VALUES
 ('admin', 'password', 1)
 GO 
@@ -149,5 +158,3 @@ INSERT INTO methods VALUES
 ('Braces/Invisalign', 'Most practices are moving away from traditional braces and towards Invisalign, but they both serve the same purpose. The goal is to straighten and correct crooked teeth.', 5000),
 ('Bonding', 'This is another way to repair damaged or chipped teeth. It involves a resin – a sort of plastic – that your dentists tints to match the natural shade of your teeth.', 200)
 GO
-
--- Extra inserts
