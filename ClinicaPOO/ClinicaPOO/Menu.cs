@@ -37,5 +37,12 @@ namespace ClinicaPOO
         {
             Application.Exit();
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            FormProfile profile = new FormProfile(userEmailData);
+            profile.Show();
+            this.Hide();
+        }
     }
 }
