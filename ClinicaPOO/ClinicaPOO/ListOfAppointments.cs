@@ -79,7 +79,18 @@ namespace ClinicaPOO
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            if (txtSearch.Text == "Type here...")
+            {
+                txtSearch.Text = "";
+            }
             input.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, txtSearch.Text);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu returnToMenu = new Menu(userEmailValue);
+            returnToMenu.Show();
+            this.Hide();
         }
     }
 }
