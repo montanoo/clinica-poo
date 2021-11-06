@@ -17,6 +17,7 @@ namespace ClinicaPOO
         SignUp signingup = new SignUp();
 
         public string userEmailValue;
+        public string CurrentPatientID;
         //for connection to sql
         private SqlConnection connector;
         private SqlCommand insertcommand;
@@ -91,7 +92,7 @@ namespace ClinicaPOO
                     connector.Close();
                     MessageBox.Show("Your changes have been saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Return to menu automatically
-                    Menu showmenu = new Menu(userEmailValue);
+                    Menu showmenu = new Menu(txtEmail.Text);
                     showmenu.Show();
                     this.Close();
                 }
@@ -127,6 +128,7 @@ namespace ClinicaPOO
             //Fills the textboxes with the patient's registered information
             while (dr1.Read())
             {
+                CurrentPatientID = dr1["id"].ToString().Trim();
                 txtName.Text = dr1["name"].ToString().Trim();
                 txtLastname.Text = dr1["lastname"].ToString().Trim();
                 txtEmail.Text = dr1["email"].ToString().Trim();
@@ -143,7 +145,7 @@ namespace ClinicaPOO
             string updateuser;
 
             updateuser = "UPDATE patient SET name= @pname, lastname= @plastname, email= @pemail, password= @ppassword,";
-            updateuser += "phone= @pphone, birthdate = @pbirthdate WHERE email= @useremail";
+            updateuser += "phone= @pphone, birthdate = @pbirthdate WHERE id= @ppatientid";
             insertcommand = new SqlCommand(updateuser, connector);
             insertcommand.Parameters.Add(new SqlParameter("@pname", SqlDbType.VarChar));
             insertcommand.Parameters["@pname"].Value = txtName.Text;
@@ -157,8 +159,8 @@ namespace ClinicaPOO
             insertcommand.Parameters["@pphone"].Value = txtPhone.Text;
             insertcommand.Parameters.Add(new SqlParameter("@pbirthdate", SqlDbType.Date));
             insertcommand.Parameters["@pbirthdate"].Value = dTPbirth.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@useremail", SqlDbType.VarChar));
-            insertcommand.Parameters["@useremail"].Value = userEmailValue;
+            insertcommand.Parameters.Add(new SqlParameter("@ppatientid", SqlDbType.VarChar));
+            insertcommand.Parameters["@ppatientid"].Value = CurrentPatientID;
         }
         //Checks if email is valid once focus leaves the textbox
         private void txtEmail_Leave(object sender, EventArgs e)
