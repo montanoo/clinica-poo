@@ -30,7 +30,7 @@ namespace ClinicaPOO
                 SqlDataReader readData = command.ExecuteReader();
                 if (readData.Read())
                 {
-                    string sql2 = "SELECT [role_id] FROM [user] WHERE username = @pUsername";
+                    string sql2 = "SELECT [role_id] FROM [user] WHERE [username] = @pUsername";
                     using (SqlConnection conn = new SqlConnection(connectString))
                     {
                         SqlCommand cmd = new SqlCommand(sql2, conn);
@@ -50,7 +50,7 @@ namespace ClinicaPOO
                     {
                         windowsAuthConn.Close();
                         // Obtendremos el email relacionado con ese usuario de la tabla patient con inner join.
-                        string sql = "SELECT email FROM patient p INNER JOIN [user] u ON u.id = p.id";
+                        string sql = "SELECT email FROM patient p INNER JOIN [user] u ON u.id = p.id WHERE [username] = @pUsername";
                         using (SqlConnection conn = new SqlConnection(connectString))
                         {
                             SqlCommand cmd = new SqlCommand(sql, conn);
