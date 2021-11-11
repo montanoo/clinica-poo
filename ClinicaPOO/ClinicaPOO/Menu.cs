@@ -42,6 +42,12 @@ namespace ClinicaPOO
         {
             Login signOut = new Login();
             signOut.Show();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            FormProfile profile = new FormProfile(userEmailData);
+            profile.Show();
             this.Hide();
         }
     }
