@@ -18,26 +18,7 @@ namespace ClinicaPOO
     {
         //to connect
         private SqlConnection connector;
-        private SqlCommand insertcommand;
         private string sqlConn;
-
-        //for password
-        public Boolean WeakPassword ()
-        {
-            int countnumbers=0;
-            for (int i = 0; i < txtPassword.TextLength; i++)
-            {
-                countnumbers += 1;
-            }
-            if(countnumbers<8)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
 
         public SignUp()
@@ -61,61 +42,28 @@ namespace ClinicaPOO
 
         private void btnsignup_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" || txtLastname.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" ||
-                txtDUI.Text == "" || txtPhone.Text == "")
+            try
             {
-                MessageBox.Show("Complete all fields please", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (txtName.Text == "Type here..." || txtLastname.Text == "Type here..." ||
-                txtEmail.Text == "Type here..." || txtPassword.Text == "Password" ||
-                txtDUI.Text == "Type here..." || txtPhone.Text == "Type here...")
-            {
-                MessageBox.Show("Complete all fields please", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if(WeakPassword()==true)
-            {
-                MessageBox.Show("Password must have more than 8 characters", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                try
+                SignUpUser objSignUp = new SignUpUser();
+                bool parameter = objSignUp.SignUp(txtUsername, txtName, txtLastname, txtEmail, txtPassword, txtDUI, txtPhone, dTPbirth);
+                if (parameter)
                 {
-                    InsertInto();
-                    insertcommand.ExecuteNonQuery();
-                    connector.Close();
-                    Login showLogin = new Login();
-                    showLogin.Show();
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error has ocurred: {ex.Message}", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    InsertUserIDSignUp objUserid = new InsertUserIDSignUp();
+                    bool parameter2 = objUserid.Updatepatient(txtUsername, txtEmail);
+                    if (parameter2)
+                    {
+                         Login Gotologin=new Login();
+                      Gotologin.Show();
+                      this.Close();
+                    }      
+                }    
             }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            
+
         }
 
-        private void InsertInto()
-        {
-            string insertuser;
-
-            insertuser = "INSERT INTO patient (name, lastname, email, password, dui, phone, birthdate )";
-            insertuser += "VALUES (@pname, @plastname, @pemail, @ppassword,@pdui,@pphone,@pbirthdate)";
-            insertcommand = new SqlCommand(insertuser, connector);
-            insertcommand.Parameters.Add(new SqlParameter("@pname", SqlDbType.VarChar));
-            insertcommand.Parameters["@pname"].Value = txtName.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@plastname", SqlDbType.VarChar));
-            insertcommand.Parameters["@plastname"].Value = txtLastname.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@pemail", SqlDbType.VarChar));
-            insertcommand.Parameters["@pemail"].Value = txtEmail.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@ppassword", SqlDbType.VarChar));
-            insertcommand.Parameters["@ppassword"].Value = txtPassword.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@pdui", SqlDbType.VarChar));
-            insertcommand.Parameters["@pdui"].Value = txtDUI.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@pphone", SqlDbType.VarChar));
-            insertcommand.Parameters["@pphone"].Value = txtPhone.Text;
-            insertcommand.Parameters.Add(new SqlParameter("@pbirthdate", SqlDbType.Date));
-            insertcommand.Parameters["@pbirthdate"].Value = dTPbirth.Text;
-        }
 
         private void btnSignUp_MouseHover(object sender, EventArgs e)
         {
@@ -135,20 +83,20 @@ namespace ClinicaPOO
 
         private void txtName_Click(object sender, EventArgs e)
         {
-            if(txtName.Text=="Type here...")
+            if(txtName.Text=="Name")
             { txtName.Text = ""; }
             
         }
 
         private void txtLastname_Click(object sender, EventArgs e)
         {
-            if (txtLastname.Text == "Type here...")
+            if (txtLastname.Text == "Lastname")
             { txtLastname.Text = ""; }
         }
 
         private void txtEmail_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "Type here...")
+            if (txtEmail.Text == "Email")
             { txtEmail.Text = ""; }
         }
 
@@ -160,14 +108,12 @@ namespace ClinicaPOO
 
         private void txtDUI_Click(object sender, EventArgs e)
         {
-            if (txtDUI.Text == "Type here...")
-            { txtDUI.Text = ""; }
+            
         }
 
         private void txtPhone_Click(object sender, EventArgs e)
         {
-            if (txtPhone.Text == "Type here...")
-            { txtPhone.Text = ""; }
+
         }
 
         private void txtName_Enter(object sender, EventArgs e)
@@ -179,7 +125,7 @@ namespace ClinicaPOO
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
             {
-            if(txtLastname.Text=="Type here...")
+            if(txtLastname.Text=="Lastname")
                 {
                     txtLastname.Text = "";
                     txtLastname.Focus();
@@ -196,7 +142,7 @@ namespace ClinicaPOO
 
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                if (txtEmail.Text == "Type here...")
+                if (txtEmail.Text == "Email")
                 {
                     txtEmail.Text = "";
                     txtEmail.Focus();
@@ -229,84 +175,26 @@ namespace ClinicaPOO
         {
 
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                if (txtDUI.Text == "Type here...")
-                {
-                    txtDUI.Text = "";
+            { 
                     txtDUI.Focus();
-                }
-                else
-                {
-                    txtDUI.Focus();
-                }
             }
-        }
-        public static bool validdui(string pdui)
-        {
-           
-            string duistring = "([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])-([0-9])$";
-   
-            if (Regex.IsMatch(pdui, duistring))
-            {
-                if (Regex.Replace(pdui, duistring, string.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
+            
         }
 
         private void txtDUI_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                if (txtPhone.Text == "Type here...")
-                {
-                    txtPhone.Text = "";
-                    txtPhone.Focus();
-                }
-                else
-                {
-                    txtPhone.Focus();
-                }
-            }
         }
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
         }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login Gotologin=new Login();
-             Gotologin.Show();
-             this.Close();
         }
 
         private void txtDUI_Leave(object sender, EventArgs e)
         {
-            if (validdui(txtDUI.Text))
-            {
-                //si es correcto no debe hacer nada
-            }
-            else
-            {
-                MessageBox.Show("Invalid DUI");
-                txtDUI.SelectAll(); //selecciona todo lo de la casilla
-                txtDUI.Focus(); //se posiciona ahí de nuevo
-            }
 
         }
         public static bool validemail(string pemail)
@@ -341,6 +229,46 @@ namespace ClinicaPOO
                 MessageBox.Show("Invalid email");
                 txtEmail.SelectAll();
                 txtEmail.Focus(); 
+            }
+        }
+
+        private void SignUp_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Username")
+            { txtUsername.Text = ""; }
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtName.Text == "Name")
+            {
+                txtName.Clear();
+                txtName.Focus();
             }
         }
     }

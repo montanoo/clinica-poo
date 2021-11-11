@@ -85,7 +85,7 @@ namespace ClinicaPOO
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-6, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 645);
+            this.panel1.Size = new System.Drawing.Size(1070, 645);
             this.panel1.TabIndex = 8;
             // 
             // superiorBar
