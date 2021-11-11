@@ -113,7 +113,6 @@ namespace ClinicaPOO
 
         private void txtPhone_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtName_Enter(object sender, EventArgs e)
