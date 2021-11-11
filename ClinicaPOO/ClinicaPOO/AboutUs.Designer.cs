@@ -148,6 +148,7 @@ namespace ClinicaPOO
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutUs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AboutUs_FormClosed);
             this.panel3.ResumeLayout(false);

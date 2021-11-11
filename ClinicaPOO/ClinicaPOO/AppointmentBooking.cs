@@ -39,7 +39,6 @@ namespace ClinicaPOO
                 SqlCommand command = new SqlCommand("SELECT * FROM dentist", windowsAuthConn);
                 SqlDataReader readData = command.ExecuteReader();
 
-
                 while (readData.Read())
                 {
                     Dentist dentist = new Dentist()

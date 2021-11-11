@@ -38,10 +38,15 @@ namespace ClinicaPOO
             Application.Exit();
         }
 
-        private void linkSignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
-            Login signOut = new Login();
-            signOut.Show();
+
+        }
+
+        private void btnPharmacy_Click(object sender, EventArgs e)
+        {
+            Pharmacy pharmacy = new Pharmacy();
+            pharmacy.Show();
             this.Hide();
         }
     }

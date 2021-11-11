@@ -26,51 +26,23 @@ namespace ClinicaPOO
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Connection sqlVariables = new Connection();
-                sqlVariables.Connect();
-                string connectString = sqlVariables.WindowsAuth;
-
-                SqlConnection windowsAuthConn = new SqlConnection(connectString);
-                windowsAuthConn.Open();
-
-                string verify = "SELECT email, password FROM patient WHERE email = @vEmail AND password = @vPassword";
-                SqlCommand command = new SqlCommand(verify, windowsAuthConn);
-                command.Parameters.AddWithValue("@vEmail", txtEmail.Text);
-                command.Parameters.AddWithValue("@vPassword", txtPassword.Text);
-
-                SqlDataReader readData = command.ExecuteReader();
-
-                if (readData.Read())
-                {
-                    windowsAuthConn.Close();
-                    Menu enterMenu = new Menu(txtEmail.Text);
-                    enterMenu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Wrong user or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch(Exception errorHappened)
-            {
-                MessageBox.Show($"There was an error: {errorHappened.Message}");
-            }
+            // Instanciamos a la clase LoginUser pasando parámetros.
+            LoginUser newLogin = new LoginUser();
+            bool returned = newLogin.Login(txtUsername, txtPassword);
+            if (returned) // Si el bool que retorna es true, puede ocultar esta pantalla y dar paso a la siguiente.
+                this.Hide();
         }
 
-        private void btnLogin_MouseHover(object sender, EventArgs e)
+        private void btnLogin_MouseHover(object sender, EventArgs e) // Poner el mouse en el botón Login.
         {
             this.BackColor = Color.White;
             btnLogin.FlatAppearance.BorderColor = Color.FromArgb(255, 0, 0, 255);
         }
 
-        private void txtEmail_Click(object sender, EventArgs e)
+        private void txtEmail_Click(object sender, EventArgs e) 
         {
-            if (txtEmail.Text == "Type here...")
-            { txtEmail.Text = ""; }
+            if (txtUsername.Text == "Type here...")
+            { txtUsername.Text = ""; }
         }
 
         private void txtPassword_Click(object sender, EventArgs e)
@@ -81,6 +53,7 @@ namespace ClinicaPOO
 
         private void picWatchPassword_Click(object sender, EventArgs e)
         {
+            // Permite mostrar o no mostrar la contraseña por medio de un contador de clicks.
             clickCounter++;
             if (clickCounter % 2 == 1)
                 txtPassword.UseSystemPasswordChar = false;
@@ -90,6 +63,7 @@ namespace ClinicaPOO
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // En un dado caso el usuario quiera entrar al menu Sign Up.
             SignUp newUser = new SignUp();
             newUser.Show();
             this.Hide();
