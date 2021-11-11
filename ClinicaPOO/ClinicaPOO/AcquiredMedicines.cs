@@ -20,6 +20,7 @@ namespace ClinicaPOO
         public string userEmailValue;
         public DataTable input;
         string filterField = "Product";
+        private SqlCommand updcommand;
         public AcquiredMedicines(string userEmail)
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace ClinicaPOO
         }
         public DataTable AddData()
         {
-            string commandForProducts = "SELECT product AS Product, billing.medicine_quantity AS Quantity,billing.medicine_quantity* inventory.price AS Price ";
+            string commandForProducts = "SELECT product AS Product, billing.medicine_quantity AS Quantity,billing.total AS [Total Price] ";
             commandForProducts += "from inventory ";
             commandForProducts += "INNER JOIN billing ON billing.medicine_id=inventory.id ";
             commandForProducts += "INNER JOIN patient ON billing.patient_id=patient.id ";
@@ -52,6 +53,10 @@ namespace ClinicaPOO
         {
             try
             {
+                //updating total
+                UpdateTotal();
+                updcommand.ExecuteNonQuery();
+                conn.Close();
                 //Adding a source to the dgv
                 dgvProducts.DataSource = AddData();
                 conn.Close(); //Closing database connection
@@ -61,6 +66,18 @@ namespace ClinicaPOO
             {
                 MessageBox.Show(error.Message);
             }
+        }
+        private void UpdateTotal()
+        {
+            string settotal;
+            settotal = "UPDATE B SET B.total =B.medicine_quantity*I.price ";
+            settotal += "FROM billing B ";
+            settotal += "INNER JOIN inventory I ON B.medicine_id = I.id";
+            settotal += "INNER JOIN patient P ON B.patient_id = P.id";
+            settotal += "WHERE P.email = @pemail";
+            updcommand = new SqlCommand(settotal, conn);
+            updcommand.Parameters.Add(new SqlParameter("@pemail", SqlDbType.VarChar));
+            updcommand.Parameters["@pemail"].Value = userEmailValue;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
