@@ -7,6 +7,7 @@ GO
 
 -- inserts into methods table
 INSERT INTO methods VALUES
+('Just buying with no method', 'No appointment created.', 0.0),
 ('Dental Exam', 'Regular dental exams are essential and can help your dentist detect and treat problems such as gum disease, tooth decay, or oral cancer early.', 90),
 ('Professional Teeth cleaning', 'Getting your teeth professionally cleaned every six months will help you keep your teeth and gums healthy.', 30),
 ('Tooth Fillings', 'Our dental team can help you go metal-free with tooth-colored fillings that ensure your teeth remain strong, healthy and intact for years to come.', 125),
