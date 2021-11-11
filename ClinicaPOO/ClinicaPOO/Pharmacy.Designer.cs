@@ -39,8 +39,10 @@ namespace ClinicaPOO
             this.ProductTxtBox = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.PharmacyGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AddProduct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.refreshBtn = new System.Windows.Forms.PictureBox();
+            this.QtyLabel = new System.Windows.Forms.Label();
+            this.QtyTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -121,7 +123,8 @@ namespace ClinicaPOO
             this.PharmacyGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PharmacyGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PharmacyGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.AddProduct});
+            this.PharmacyGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkMagenta;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -132,7 +135,7 @@ namespace ClinicaPOO
             this.PharmacyGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.PharmacyGridView.EnableHeadersVisualStyles = false;
             this.PharmacyGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PharmacyGridView.Location = new System.Drawing.Point(213, 294);
+            this.PharmacyGridView.Location = new System.Drawing.Point(155, 283);
             this.PharmacyGridView.Name = "PharmacyGridView";
             this.PharmacyGridView.ReadOnly = true;
             this.PharmacyGridView.RowHeadersVisible = false;
@@ -144,25 +147,27 @@ namespace ClinicaPOO
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkMagenta;
             this.PharmacyGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.PharmacyGridView.RowTemplate.Height = 33;
-            this.PharmacyGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.PharmacyGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PharmacyGridView.Size = new System.Drawing.Size(1036, 576);
             this.PharmacyGridView.TabIndex = 5;
-            this.PharmacyGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PharmacyGridView_CellContentClick);
+            this.PharmacyGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PharmacyGridView_CellContentDoubleClick);
             // 
-            // Column1
+            // AddProduct
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkMagenta;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Thistle;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Add Product";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Text = "ADD";
-            this.Column1.UseColumnTextForButtonValue = true;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Honeydew;
+            this.AddProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddProduct.HeaderText = "Add Product";
+            this.AddProduct.MinimumWidth = 8;
+            this.AddProduct.Name = "AddProduct";
+            this.AddProduct.ReadOnly = true;
+            this.AddProduct.Text = "ADD";
+            this.AddProduct.UseColumnTextForButtonValue = true;
             // 
             // refreshBtn
             // 
@@ -177,6 +182,26 @@ namespace ClinicaPOO
             this.refreshBtn.TabStop = false;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
+            // QtyLabel
+            // 
+            this.QtyLabel.AutoSize = true;
+            this.QtyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.QtyLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.QtyLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.QtyLabel.Location = new System.Drawing.Point(1244, 357);
+            this.QtyLabel.Name = "QtyLabel";
+            this.QtyLabel.Size = new System.Drawing.Size(132, 38);
+            this.QtyLabel.TabIndex = 7;
+            this.QtyLabel.Text = "Quantity";
+            // 
+            // QtyTextBox
+            // 
+            this.QtyTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.QtyTextBox.Location = new System.Drawing.Point(1279, 424);
+            this.QtyTextBox.Name = "QtyTextBox";
+            this.QtyTextBox.Size = new System.Drawing.Size(67, 39);
+            this.QtyTextBox.TabIndex = 8;
+            // 
             // Pharmacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -184,6 +209,8 @@ namespace ClinicaPOO
             this.BackgroundImage = global::ClinicaPOO.Properties.Resources.HD_wallpaper_plain_purple_background_purple;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1418, 968);
+            this.Controls.Add(this.QtyTextBox);
+            this.Controls.Add(this.QtyLabel);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.PharmacyGridView);
             this.Controls.Add(this.btnBuscar);
@@ -211,9 +238,11 @@ namespace ClinicaPOO
         private System.Windows.Forms.PictureBox btnReturnMenu;
         private System.Windows.Forms.TextBox ProductTxtBox;
         private System.Windows.Forms.PictureBox btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        
         private System.Windows.Forms.DataGridView PharmacyGridView;
         private System.Windows.Forms.PictureBox refreshBtn;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn AddProduct;
+        private System.Windows.Forms.Label QtyLabel;
+        private System.Windows.Forms.TextBox QtyTextBox;
     }
 }
