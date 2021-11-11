@@ -37,5 +37,17 @@ namespace ClinicaPOO
         {
             Application.Exit();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPharmacy_Click(object sender, EventArgs e)
+        {
+            Pharmacy pharmacy = new Pharmacy();
+            pharmacy.Show();
+            this.Hide();
+        }
     }
 }
