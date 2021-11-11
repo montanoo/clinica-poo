@@ -103,12 +103,14 @@ namespace ClinicaPOO
             // dentistcmb
             // 
             this.dentistcmb.BackColor = System.Drawing.Color.White;
-            this.dentistcmb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dentistcmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dentistcmb.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dentistcmb.ForeColor = System.Drawing.Color.DarkGray;
             this.dentistcmb.FormattingEnabled = true;
+            this.dentistcmb.ItemHeight = 45;
             this.dentistcmb.Location = new System.Drawing.Point(231, 309);
             this.dentistcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dentistcmb.MaxDropDownItems = 5;
             this.dentistcmb.Name = "dentistcmb";
             this.dentistcmb.Size = new System.Drawing.Size(555, 53);
             this.dentistcmb.TabIndex = 6;
@@ -116,12 +118,15 @@ namespace ClinicaPOO
             // methodcmb
             // 
             this.methodcmb.BackColor = System.Drawing.Color.White;
-            this.methodcmb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.methodcmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.methodcmb.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.methodcmb.ForeColor = System.Drawing.Color.DarkGray;
             this.methodcmb.FormattingEnabled = true;
+            this.methodcmb.IntegralHeight = false;
+            this.methodcmb.ItemHeight = 45;
             this.methodcmb.Location = new System.Drawing.Point(231, 536);
             this.methodcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.methodcmb.MaxDropDownItems = 5;
             this.methodcmb.Name = "methodcmb";
             this.methodcmb.Size = new System.Drawing.Size(555, 53);
             this.methodcmb.TabIndex = 7;
@@ -288,6 +293,7 @@ namespace ClinicaPOO
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "AppointmentBooking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment booking";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppointmentBooking_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

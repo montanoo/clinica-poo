@@ -43,6 +43,7 @@ namespace ClinicaPOO
             this.labelprofile = new System.Windows.Forms.Label();
             this.labelpharmacy = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkSignOut = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.barramenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnListApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBookApp)).BeginInit();
@@ -228,6 +229,20 @@ namespace ClinicaPOO
             this.label1.Text = "Acquired\r\nmedicines\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // linkSignOut
+            // 
+            this.linkSignOut.AutoSize = true;
+            this.linkSignOut.BackColor = System.Drawing.Color.Transparent;
+            this.linkSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.linkSignOut.LinkColor = System.Drawing.Color.White;
+            this.linkSignOut.Location = new System.Drawing.Point(497, 713);
+            this.linkSignOut.Name = "linkSignOut";
+            this.linkSignOut.Size = new System.Drawing.Size(101, 31);
+            this.linkSignOut.TabIndex = 13;
+            this.linkSignOut.TabStop = true;
+            this.linkSignOut.Text = "Sign out";
+            this.linkSignOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignOut_LinkClicked);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -236,6 +251,7 @@ namespace ClinicaPOO
             this.BackgroundImage = global::ClinicaPOO.Properties.Resources.HD_wallpaper_plain_purple_background_purple;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1134, 774);
+            this.Controls.Add(this.linkSignOut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelpharmacy);
             this.Controls.Add(this.labelprofile);
@@ -252,6 +268,7 @@ namespace ClinicaPOO
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dentist\'s\r\nInformation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.barramenu)).EndInit();
@@ -281,5 +298,6 @@ namespace ClinicaPOO
         private System.Windows.Forms.Label labelprofile;
         private System.Windows.Forms.Label labelpharmacy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkSignOut;
     }
 }

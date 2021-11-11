@@ -165,6 +165,7 @@ namespace ClinicaPOO
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Welcome";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Welcome_FormClosed);
             this.panel1.ResumeLayout(false);

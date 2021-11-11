@@ -30,7 +30,7 @@ namespace ClinicaPOO
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,18 +55,18 @@ namespace ClinicaPOO
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtEmail
+            // txtUsername
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
-            this.txtEmail.Location = new System.Drawing.Point(97, 325);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(493, 31);
-            this.txtEmail.TabIndex = 1;
-            this.txtEmail.Text = "Type here...";
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(2)))), ((int)(((byte)(48)))));
+            this.txtUsername.Location = new System.Drawing.Point(97, 325);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(493, 31);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "Type here...";
+            this.txtUsername.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // txtPassword
             // 
@@ -90,9 +90,9 @@ namespace ClinicaPOO
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
             this.label1.Location = new System.Drawing.Point(90, 295);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 31);
+            this.label1.Size = new System.Drawing.Size(127, 31);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Email:";
+            this.label1.Text = "Username:";
             // 
             // label2
             // 
@@ -146,7 +146,7 @@ namespace ClinicaPOO
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label1);
@@ -278,6 +278,7 @@ namespace ClinicaPOO
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.panel2.ResumeLayout(false);
@@ -292,7 +293,7 @@ namespace ClinicaPOO
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

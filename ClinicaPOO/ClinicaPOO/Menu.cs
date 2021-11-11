@@ -37,5 +37,12 @@ namespace ClinicaPOO
         {
             Application.Exit();
         }
+
+        private void linkSignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login signOut = new Login();
+            signOut.Show();
+            this.Hide();
+        }
     }
 }

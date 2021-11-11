@@ -119,7 +119,7 @@ namespace ClinicaPOO
             // 
             this.backToLogin.BackColor = System.Drawing.SystemColors.Control;
             this.backToLogin.Image = ((System.Drawing.Image)(resources.GetObject("backToLogin.Image")));
-            this.backToLogin.Location = new System.Drawing.Point(1357, 12);
+            this.backToLogin.Location = new System.Drawing.Point(661, 15);
             this.backToLogin.Name = "backToLogin";
             this.backToLogin.Size = new System.Drawing.Size(53, 53);
             this.backToLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,6 +175,7 @@ namespace ClinicaPOO
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.backToLogin);
             this.panel2.Controls.Add(this.linkSignUp);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -471,6 +472,7 @@ namespace ClinicaPOO
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
             ((System.ComponentModel.ISupportInitialize)(this.backToLogin)).EndInit();
             this.panel1.ResumeLayout(false);
