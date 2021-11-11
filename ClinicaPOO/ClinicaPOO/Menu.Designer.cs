@@ -61,7 +61,7 @@ namespace ClinicaPOO
             this.barramenu.Location = new System.Drawing.Point(0, -2);
             this.barramenu.Margin = new System.Windows.Forms.Padding(2);
             this.barramenu.Name = "barramenu";
-            this.barramenu.Size = new System.Drawing.Size(1138, 54);
+            this.barramenu.Size = new System.Drawing.Size(996, 40);
             this.barramenu.TabIndex = 0;
             this.barramenu.TabStop = false;
             // 
@@ -71,10 +71,10 @@ namespace ClinicaPOO
             this.btnListApp.BackgroundImage = global::ClinicaPOO.Properties.Resources.clipboard_1;
             this.btnListApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnListApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListApp.Location = new System.Drawing.Point(471, 222);
+            this.btnListApp.Location = new System.Drawing.Point(412, 166);
             this.btnListApp.Margin = new System.Windows.Forms.Padding(2);
             this.btnListApp.Name = "btnListApp";
-            this.btnListApp.Size = new System.Drawing.Size(170, 169);
+            this.btnListApp.Size = new System.Drawing.Size(149, 127);
             this.btnListApp.TabIndex = 1;
             this.btnListApp.TabStop = false;
             this.btnListApp.Click += new System.EventHandler(this.btnListApp_Click);
@@ -85,10 +85,10 @@ namespace ClinicaPOO
             this.btnBookApp.BackgroundImage = global::ClinicaPOO.Properties.Resources.appointment_1;
             this.btnBookApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBookApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBookApp.Location = new System.Drawing.Point(158, 242);
+            this.btnBookApp.Location = new System.Drawing.Point(138, 182);
             this.btnBookApp.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookApp.Name = "btnBookApp";
-            this.btnBookApp.Size = new System.Drawing.Size(134, 134);
+            this.btnBookApp.Size = new System.Drawing.Size(117, 100);
             this.btnBookApp.TabIndex = 2;
             this.btnBookApp.TabStop = false;
             this.btnBookApp.Click += new System.EventHandler(this.btnBookApp_Click);
@@ -99,10 +99,10 @@ namespace ClinicaPOO
             this.btnDentists.BackgroundImage = global::ClinicaPOO.Properties.Resources.dentist__1__1;
             this.btnDentists.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDentists.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDentists.Location = new System.Drawing.Point(828, 242);
+            this.btnDentists.Location = new System.Drawing.Point(724, 182);
             this.btnDentists.Margin = new System.Windows.Forms.Padding(2);
             this.btnDentists.Name = "btnDentists";
-            this.btnDentists.Size = new System.Drawing.Size(134, 134);
+            this.btnDentists.Size = new System.Drawing.Size(117, 100);
             this.btnDentists.TabIndex = 3;
             this.btnDentists.TabStop = false;
             // 
@@ -112,12 +112,13 @@ namespace ClinicaPOO
             this.btnProfile.BackgroundImage = global::ClinicaPOO.Properties.Resources.user__1__1;
             this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.Location = new System.Drawing.Point(158, 538);
+            this.btnProfile.Location = new System.Drawing.Point(138, 404);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(134, 134);
+            this.btnProfile.Size = new System.Drawing.Size(117, 100);
             this.btnProfile.TabIndex = 4;
             this.btnProfile.TabStop = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnPharmacy
             // 
@@ -125,10 +126,10 @@ namespace ClinicaPOO
             this.btnPharmacy.BackgroundImage = global::ClinicaPOO.Properties.Resources.pharmacy_1;
             this.btnPharmacy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPharmacy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPharmacy.Location = new System.Drawing.Point(482, 533);
+            this.btnPharmacy.Location = new System.Drawing.Point(422, 400);
             this.btnPharmacy.Margin = new System.Windows.Forms.Padding(2);
             this.btnPharmacy.Name = "btnPharmacy";
-            this.btnPharmacy.Size = new System.Drawing.Size(140, 140);
+            this.btnPharmacy.Size = new System.Drawing.Size(122, 105);
             this.btnPharmacy.TabIndex = 5;
             this.btnPharmacy.TabStop = false;
             // 
@@ -138,10 +139,10 @@ namespace ClinicaPOO
             this.btnMedicines.BackgroundImage = global::ClinicaPOO.Properties.Resources.pill_1;
             this.btnMedicines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMedicines.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMedicines.Location = new System.Drawing.Point(828, 533);
+            this.btnMedicines.Location = new System.Drawing.Point(724, 400);
             this.btnMedicines.Margin = new System.Windows.Forms.Padding(2);
             this.btnMedicines.Name = "btnMedicines";
-            this.btnMedicines.Size = new System.Drawing.Size(140, 140);
+            this.btnMedicines.Size = new System.Drawing.Size(122, 105);
             this.btnMedicines.TabIndex = 6;
             this.btnMedicines.TabStop = false;
             // 
@@ -151,10 +152,10 @@ namespace ClinicaPOO
             this.labelbooking.BackColor = System.Drawing.Color.Transparent;
             this.labelbooking.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelbooking.ForeColor = System.Drawing.Color.White;
-            this.labelbooking.Location = new System.Drawing.Point(122, 143);
+            this.labelbooking.Location = new System.Drawing.Point(107, 107);
             this.labelbooking.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbooking.Name = "labelbooking";
-            this.labelbooking.Size = new System.Drawing.Size(210, 82);
+            this.labelbooking.Size = new System.Drawing.Size(169, 64);
             this.labelbooking.TabIndex = 7;
             this.labelbooking.Text = "Book an\r\n appointment";
             this.labelbooking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,10 +166,10 @@ namespace ClinicaPOO
             this.labelapp.BackColor = System.Drawing.Color.Transparent;
             this.labelapp.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelapp.ForeColor = System.Drawing.Color.White;
-            this.labelapp.Location = new System.Drawing.Point(452, 143);
+            this.labelapp.Location = new System.Drawing.Point(396, 107);
             this.labelapp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelapp.Name = "labelapp";
-            this.labelapp.Size = new System.Drawing.Size(223, 82);
+            this.labelapp.Size = new System.Drawing.Size(180, 64);
             this.labelapp.TabIndex = 8;
             this.labelapp.Text = "List of\r\n appointments";
             this.labelapp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,10 +180,10 @@ namespace ClinicaPOO
             this.labeldentist.BackColor = System.Drawing.Color.Transparent;
             this.labeldentist.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labeldentist.ForeColor = System.Drawing.Color.White;
-            this.labeldentist.Location = new System.Drawing.Point(806, 143);
+            this.labeldentist.Location = new System.Drawing.Point(705, 107);
             this.labeldentist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labeldentist.Name = "labeldentist";
-            this.labeldentist.Size = new System.Drawing.Size(188, 82);
+            this.labeldentist.Size = new System.Drawing.Size(152, 64);
             this.labeldentist.TabIndex = 9;
             this.labeldentist.Text = "Dentist\'s\r\nInformation";
             this.labeldentist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,10 +194,10 @@ namespace ClinicaPOO
             this.labelprofile.BackColor = System.Drawing.Color.Transparent;
             this.labelprofile.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelprofile.ForeColor = System.Drawing.Color.White;
-            this.labelprofile.Location = new System.Drawing.Point(161, 436);
+            this.labelprofile.Location = new System.Drawing.Point(141, 327);
             this.labelprofile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelprofile.Name = "labelprofile";
-            this.labelprofile.Size = new System.Drawing.Size(138, 82);
+            this.labelprofile.Size = new System.Drawing.Size(111, 64);
             this.labelprofile.TabIndex = 10;
             this.labelprofile.Text = "View my\r\nprofile\r\n";
             this.labelprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -207,10 +208,10 @@ namespace ClinicaPOO
             this.labelpharmacy.BackColor = System.Drawing.Color.Transparent;
             this.labelpharmacy.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelpharmacy.ForeColor = System.Drawing.Color.White;
-            this.labelpharmacy.Location = new System.Drawing.Point(482, 455);
+            this.labelpharmacy.Location = new System.Drawing.Point(422, 341);
             this.labelpharmacy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelpharmacy.Name = "labelpharmacy";
-            this.labelpharmacy.Size = new System.Drawing.Size(155, 41);
+            this.labelpharmacy.Size = new System.Drawing.Size(126, 32);
             this.labelpharmacy.TabIndex = 11;
             this.labelpharmacy.Text = "Pharmacy";
             this.labelpharmacy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,10 +222,10 @@ namespace ClinicaPOO
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(812, 436);
+            this.label1.Location = new System.Drawing.Point(710, 327);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 82);
+            this.label1.Size = new System.Drawing.Size(129, 64);
             this.label1.TabIndex = 12;
             this.label1.Text = "Acquired\r\nmedicines\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,7 +246,7 @@ namespace ClinicaPOO
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::ClinicaPOO.Properties.Resources.HD_wallpaper_plain_purple_background_purple;
