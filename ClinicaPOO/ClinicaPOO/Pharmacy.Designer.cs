@@ -52,7 +52,6 @@ namespace ClinicaPOO
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::ClinicaPOO.Properties.Resources.Barrapharmacy;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -75,7 +74,7 @@ namespace ClinicaPOO
             // btnReturnMenu
             // 
             this.btnReturnMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnReturnMenu.BackgroundImage = global::ClinicaPOO.Properties.Resources.left_arrow_1;
+
             this.btnReturnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReturnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReturnMenu.Location = new System.Drawing.Point(47, 106);
@@ -97,7 +96,6 @@ namespace ClinicaPOO
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BackgroundImage = global::ClinicaPOO.Properties.Resources.search_1;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Location = new System.Drawing.Point(1162, 189);
@@ -172,7 +170,6 @@ namespace ClinicaPOO
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.Transparent;
-            this.refreshBtn.BackgroundImage = global::ClinicaPOO.Properties.Resources.left_arrow_1;
             this.refreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Location = new System.Drawing.Point(1244, 189);
