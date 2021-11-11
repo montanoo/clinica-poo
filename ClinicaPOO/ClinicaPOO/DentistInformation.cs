@@ -12,7 +12,7 @@ using System.Data.OleDb;
 
 namespace ClinicaPOO
 {
-    public partial class dentist_information : Form
+    public partial class DentistInformation : Form
 
 
     {
@@ -21,7 +21,7 @@ namespace ClinicaPOO
         ///variables for search bar
         public DataTable input;
         string filterField = "specialty";
-        public dentist_information()
+        public DentistInformation()
         {
             InitializeComponent();
             //using class Connection

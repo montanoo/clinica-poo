@@ -72,9 +72,9 @@ namespace ClinicaPOO
             string settotal;
             settotal = "UPDATE B SET B.total =B.medicine_quantity*I.price ";
             settotal += "FROM billing B ";
-            settotal += "INNER JOIN inventory I ON B.medicine_id = I.id";
-            settotal += "INNER JOIN patient P ON B.patient_id = P.id";
-            settotal += "WHERE P.email = @pemail";
+            settotal += "INNER JOIN inventory I ON B.medicine_id = I.id ";
+            settotal += "INNER JOIN patient P ON B.patient_id = P.id ";
+            settotal += "WHERE P.email = @pemail ";
             updcommand = new SqlCommand(settotal, conn);
             updcommand.Parameters.Add(new SqlParameter("@pemail", SqlDbType.VarChar));
             updcommand.Parameters["@pemail"].Value = userEmailValue;

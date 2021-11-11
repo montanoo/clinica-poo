@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace ClinicaPOO
 {
@@ -167,7 +168,8 @@ namespace ClinicaPOO
         //Checks if email is valid once focus leaves the textbox
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            if (!signingup.validemail(txtEmail.Text))
+
+            if (!IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Invalid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.SelectAll();
@@ -180,6 +182,26 @@ namespace ClinicaPOO
             Menu showmenu = new Menu(userEmailValue);
             showmenu.Show();
             this.Hide();
+        }
+        private bool IsValidEmail(string pemail)
+        {
+            string expression = @"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])$";
+
+            if (Regex.IsMatch(pemail, expression))
+            {
+                if (Regex.Replace(pemail, expression, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

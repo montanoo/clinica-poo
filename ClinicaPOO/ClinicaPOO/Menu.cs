@@ -50,5 +50,26 @@ namespace ClinicaPOO
             profile.Show();
             this.Hide();
         }
+
+        private void btnMedicines_Click(object sender, EventArgs e)
+        {
+            AcquiredMedicines showMedicines = new AcquiredMedicines(userEmailData);
+            showMedicines.Show();
+            this.Hide();
+        }
+
+        private void btnPharmacy_Click(object sender, EventArgs e)
+        {
+            Pharmacy showPharmacy = new Pharmacy(userEmailData);
+            showPharmacy.Show();
+            this.Hide();
+        }
+
+        private void btnDentists_Click(object sender, EventArgs e)
+        {
+            DentistInformation showDentist = new DentistInformation();
+            showDentist.Show();
+            this.Hide();
+        }
     }
 }
