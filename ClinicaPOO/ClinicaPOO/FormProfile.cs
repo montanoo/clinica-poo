@@ -78,7 +78,9 @@ namespace ClinicaPOO
         //When saving changes, check if password is valid
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (signingup.WeakPassword() == true)
+            SignUpUser checkPassword = new SignUpUser();
+            
+            if (checkPassword.WeakPassword(txtPassword) == true)
             {
                 MessageBox.Show("Password must have more than 8 characters", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
