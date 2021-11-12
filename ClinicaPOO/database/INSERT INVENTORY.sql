@@ -1,4 +1,5 @@
 --inserting values into inventory
+insert into inventory values ('Just an appointment',100, 0);
 insert into inventory values ('Ibuprofeno',200, 40);
 insert into inventory values ('Naproxeno',200, 30);
 insert into inventory values ('Acetaminofen',200,10);
@@ -99,3 +100,6 @@ insert into inventory values ('Avelox x20 comprimidos',200,123.42);
 insert into inventory values ('Baclosef x10 tabletas',200,12.92);
 insert into inventory values ('Bredelin x7 tabletas',200,28.05);
 insert into inventory values ('Cefadroxilo x30 capsulas',200,20.11);
+
+USE ClinicaPOO
+SELECT * FROM inventory

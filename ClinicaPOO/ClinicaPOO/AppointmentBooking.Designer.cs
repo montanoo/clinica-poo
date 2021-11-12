@@ -107,6 +107,7 @@ namespace ClinicaPOO
             this.dentistcmb.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dentistcmb.ForeColor = System.Drawing.Color.DarkGray;
             this.dentistcmb.FormattingEnabled = true;
+            this.dentistcmb.IntegralHeight = false;
             this.dentistcmb.ItemHeight = 45;
             this.dentistcmb.Location = new System.Drawing.Point(231, 309);
             this.dentistcmb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);

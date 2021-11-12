@@ -36,7 +36,7 @@ namespace ClinicaPOO
                 string connectString = sqlVariables.WindowsAuth;
                 SqlConnection windowsAuthConn = new SqlConnection(connectString);
                 windowsAuthConn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM dentist", windowsAuthConn);
+                SqlCommand command = new SqlCommand("SELECT * FROM dentist WHERE status = 1", windowsAuthConn);
                 SqlDataReader readData = command.ExecuteReader();
 
                 while (readData.Read())
@@ -64,7 +64,7 @@ namespace ClinicaPOO
                 string connectString2 = sqlVariables2.WindowsAuth;
                 SqlConnection windowsAuthConn2 = new SqlConnection(connectString2);
                 windowsAuthConn2.Open();
-                SqlCommand command2 = new SqlCommand("SELECT * FROM methods", windowsAuthConn2);
+                SqlCommand command2 = new SqlCommand("SELECT * FROM methods WHERE id > 1", windowsAuthConn2);
                 SqlDataReader readData2 = command2.ExecuteReader();
 
 

@@ -19,13 +19,9 @@ namespace ClinicaPOO
         public string userEmailData;
         private SqlCommand insert1;
         public int userId;
+        string filterField = "Product Name";
+        public DataTable input;
 
-
-        public Pharmacy()
-        {
-            InitializeComponent();
-            refreshBtn.Hide();
-        }
         public Pharmacy(string email)
         {
             InitializeComponent();
@@ -35,15 +31,15 @@ namespace ClinicaPOO
             string connectString = sqlVariables.WindowsAuth;
 
             SqlConnection windowsAuthConn = new SqlConnection(connectString);
-            string sql = "SELECT patient_id FROM patient WHERE [email] = @pEmail";
+            string sql = "SELECT id FROM patient WHERE [email] = @pEmail";
             using (SqlConnection conn = new SqlConnection(connectString))
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@pEmail", email);
+                cmd.Parameters.AddWithValue("@pEmail", userEmailData);
                 try
                 {
                     conn.Open();
-                    userId = (int)cmd.ExecuteScalar(); // Obtenemos el string del email.
+                    userId = (int)cmd.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -53,9 +49,10 @@ namespace ClinicaPOO
         }
         private void fillGrid()
         {
-            string consult = "select product AS[Product Name], id AS [Product ID] , price AS [Price] from inventory";
+            string consult = "select product AS [Product Name], id AS [Product ID] , price AS [Price] from inventory WHERE id > 1";
             SqlDataAdapter adapter = new SqlDataAdapter(consult, conn);
             DataTable dt = new DataTable();
+            input = dt;
             adapter.Fill(dt);
             PharmacyGridView.DataSource = dt;
         }
@@ -79,24 +76,7 @@ namespace ClinicaPOO
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                string consult = "SELECT product AS[Product Name], id AS [Product ID] ,price AS [Price] FROM inventory WHERE product='" + ProductTxtBox.Text + "'";
-                SqlDataAdapter adapter = new SqlDataAdapter(consult, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                PharmacyGridView.DataSource = dt;
-                SqlCommand command = new SqlCommand(consult, conn);
-                SqlDataReader dataReader;
-                dataReader = command.ExecuteReader();
-                refreshBtn.Show();
-                conn.Close();
-            }
-            catch
-            {
-                MessageBox.Show("An error occured ,product not found", "Error", MessageBoxButtons.OK);
-            }
+            
 
         }
 
@@ -125,7 +105,6 @@ namespace ClinicaPOO
                     cantidad = Convert.ToInt32(QtyTextBox.Text); 
                     try
                     {
-                        
                         conn.Open();
                         insert1 = new SqlCommand("INSERT INTO billing (patient_id, method_id, medicine_id, medicine_quantity, total) VALUES (@patient_id, @method_id, @medicine_id, @medicine_quantity, @total )", conn);
                         insert1.Parameters.Add("@medicine_quantity", SqlDbType.Int).Value = int.Parse(QtyTextBox.Text); 
@@ -137,6 +116,9 @@ namespace ClinicaPOO
                         insert1.Parameters.Add("@total", SqlDbType.Float).Value = total;
                         insert1.ExecuteNonQuery();
                         conn.Close();
+
+                        MessageBox.Show("We have added your product succesfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        QtyTextBox.Text = "";
                     }
                     catch (Exception error)
                     {
@@ -145,6 +127,21 @@ namespace ClinicaPOO
 
                 }
             }
+        }
+
+        private void NameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            input.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, ProductTxtBox.Text);
+        }
+
+        private void Pharmacy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

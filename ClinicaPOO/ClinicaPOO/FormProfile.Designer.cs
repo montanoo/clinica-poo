@@ -31,6 +31,7 @@ namespace ClinicaPOO
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfile));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@ namespace ClinicaPOO
             this.btnEditBirth = new System.Windows.Forms.PictureBox();
             this.btnSave = new ClinicaPOO.RoundedStart();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditLastn)).BeginInit();
@@ -77,11 +77,26 @@ namespace ClinicaPOO
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(1, -87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(1, -116);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 736);
+            this.panel1.Size = new System.Drawing.Size(296, 1097);
             this.panel1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(61, 133);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 116);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -89,19 +104,18 @@ namespace ClinicaPOO
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label10.Location = new System.Drawing.Point(473, 409);
+            this.label10.Location = new System.Drawing.Point(541, 643);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 20);
+            this.label10.Size = new System.Drawing.Size(181, 25);
             this.label10.TabIndex = 55;
             this.label10.Text = "(At least 8 characters)";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel9.Location = new System.Drawing.Point(789, 379);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Location = new System.Drawing.Point(959, 567);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(315, 4);
+            this.panel9.Size = new System.Drawing.Size(360, 5);
             this.panel9.TabIndex = 54;
             // 
             // label9
@@ -110,9 +124,9 @@ namespace ClinicaPOO
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label9.Location = new System.Drawing.Point(795, 317);
+            this.label9.Location = new System.Drawing.Point(966, 485);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 25);
+            this.label9.Size = new System.Drawing.Size(159, 31);
             this.label9.TabIndex = 53;
             this.label9.Text = "Date of birth:";
             // 
@@ -126,22 +140,20 @@ namespace ClinicaPOO
             this.dTPbirth.Enabled = false;
             this.dTPbirth.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dTPbirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTPbirth.Location = new System.Drawing.Point(795, 342);
-            this.dTPbirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dTPbirth.Location = new System.Drawing.Point(966, 518);
             this.dTPbirth.MaxDate = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             this.dTPbirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dTPbirth.Name = "dTPbirth";
-            this.dTPbirth.Size = new System.Drawing.Size(208, 32);
+            this.dTPbirth.Size = new System.Drawing.Size(237, 38);
             this.dTPbirth.TabIndex = 43;
             this.dTPbirth.Value = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel8.Location = new System.Drawing.Point(789, 306);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Location = new System.Drawing.Point(959, 427);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(315, 4);
+            this.panel8.Size = new System.Drawing.Size(360, 5);
             this.panel8.TabIndex = 52;
             // 
             // label8
@@ -150,9 +162,9 @@ namespace ClinicaPOO
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label8.Location = new System.Drawing.Point(795, 248);
+            this.label8.Location = new System.Drawing.Point(966, 350);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 25);
+            this.label8.Size = new System.Drawing.Size(88, 31);
             this.label8.TabIndex = 51;
             this.label8.Text = "Phone:";
             // 
@@ -162,21 +174,19 @@ namespace ClinicaPOO
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPhone.Location = new System.Drawing.Point(799, 275);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Location = new System.Drawing.Point(970, 386);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(305, 25);
+            this.txtPhone.Size = new System.Drawing.Size(349, 31);
             this.txtPhone.TabIndex = 42;
             this.txtPhone.Text = "Type here...";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel7.Location = new System.Drawing.Point(789, 234);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(952, 291);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(315, 4);
+            this.panel7.Size = new System.Drawing.Size(360, 5);
             this.panel7.TabIndex = 50;
             // 
             // label7
@@ -185,9 +195,9 @@ namespace ClinicaPOO
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label7.Location = new System.Drawing.Point(795, 176);
+            this.label7.Location = new System.Drawing.Point(959, 214);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 25);
+            this.label7.Size = new System.Drawing.Size(61, 31);
             this.label7.TabIndex = 49;
             this.label7.Text = "DUI:";
             // 
@@ -197,21 +207,19 @@ namespace ClinicaPOO
             this.txtDUI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDUI.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDUI.Location = new System.Drawing.Point(799, 203);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDUI.Location = new System.Drawing.Point(963, 250);
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.ReadOnly = true;
-            this.txtDUI.Size = new System.Drawing.Size(305, 25);
+            this.txtDUI.Size = new System.Drawing.Size(349, 31);
             this.txtDUI.TabIndex = 41;
             this.txtDUI.Text = "Type here...";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel6.Location = new System.Drawing.Point(307, 467);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(351, 721);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(315, 4);
+            this.panel6.Size = new System.Drawing.Size(360, 5);
             this.panel6.TabIndex = 48;
             // 
             // label6
@@ -220,9 +228,9 @@ namespace ClinicaPOO
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label6.Location = new System.Drawing.Point(313, 409);
+            this.label6.Location = new System.Drawing.Point(358, 643);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.Size = new System.Drawing.Size(120, 31);
             this.label6.TabIndex = 47;
             this.label6.Text = "Password:";
             // 
@@ -232,23 +240,19 @@ namespace ClinicaPOO
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.Location = new System.Drawing.Point(317, 435);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(362, 678);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(313, 25);
+            this.txtPassword.Size = new System.Drawing.Size(358, 31);
             this.txtPassword.TabIndex = 40;
             this.txtPassword.Text = "Password";
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel5.Location = new System.Drawing.Point(310, 320);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(354, 427);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(315, 4);
+            this.panel5.Size = new System.Drawing.Size(360, 5);
             this.panel5.TabIndex = 46;
             // 
             // txtLastname
@@ -257,22 +261,21 @@ namespace ClinicaPOO
             this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtLastname.Location = new System.Drawing.Point(315, 289);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLastname.Location = new System.Drawing.Point(360, 385);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.ReadOnly = true;
-            this.txtLastname.Size = new System.Drawing.Size(313, 25);
+            this.txtLastname.Size = new System.Drawing.Size(358, 31);
             this.txtLastname.TabIndex = 38;
             this.txtLastname.Text = "Type here...";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel3.Location = new System.Drawing.Point(307, 393);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(351, 570);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 4);
+            this.panel3.Size = new System.Drawing.Size(360, 5);
             this.panel3.TabIndex = 45;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label2
             // 
@@ -280,11 +283,12 @@ namespace ClinicaPOO
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label2.Location = new System.Drawing.Point(313, 335);
+            this.label2.Location = new System.Drawing.Point(358, 493);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(79, 31);
             this.label2.TabIndex = 44;
             this.label2.Text = "Email:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtEmail
             // 
@@ -292,13 +296,13 @@ namespace ClinicaPOO
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(317, 361);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Location = new System.Drawing.Point(362, 527);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(313, 25);
+            this.txtEmail.Size = new System.Drawing.Size(358, 31);
             this.txtEmail.TabIndex = 39;
             this.txtEmail.Text = "Type here...";
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // label3
@@ -307,19 +311,18 @@ namespace ClinicaPOO
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label3.Location = new System.Drawing.Point(313, 252);
+            this.label3.Location = new System.Drawing.Point(360, 351);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 25);
+            this.label3.Size = new System.Drawing.Size(122, 31);
             this.label3.TabIndex = 59;
             this.label3.Text = "Lastname:";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.panel4.Location = new System.Drawing.Point(315, 241);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(360, 291);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(315, 4);
+            this.panel4.Size = new System.Drawing.Size(360, 5);
             this.panel4.TabIndex = 58;
             // 
             // label1
@@ -328,9 +331,9 @@ namespace ClinicaPOO
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(313, 183);
+            this.label1.Location = new System.Drawing.Point(358, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
+            this.label1.Size = new System.Drawing.Size(83, 31);
             this.label1.TabIndex = 57;
             this.label1.Text = "Name:";
             // 
@@ -340,11 +343,10 @@ namespace ClinicaPOO
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(317, 209);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(362, 249);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(313, 25);
+            this.txtName.Size = new System.Drawing.Size(358, 31);
             this.txtName.TabIndex = 56;
             this.txtName.Text = "Type here...";
             // 
@@ -354,18 +356,19 @@ namespace ClinicaPOO
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label4.Location = new System.Drawing.Point(305, 22);
+            this.label4.Location = new System.Drawing.Point(349, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(303, 65);
+            this.label4.Size = new System.Drawing.Size(378, 81);
             this.label4.TabIndex = 60;
             this.label4.Text = "MY PROFILE";
             // 
             // btnEditName
             // 
             this.btnEditName.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditName.Location = new System.Drawing.Point(636, 199);
+            this.btnEditName.Location = new System.Drawing.Point(727, 235);
+            this.btnEditName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditName.Name = "btnEditName";
-            this.btnEditName.Size = new System.Drawing.Size(36, 35);
+            this.btnEditName.Size = new System.Drawing.Size(41, 47);
             this.btnEditName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditName.TabIndex = 61;
             this.btnEditName.TabStop = false;
@@ -374,9 +377,10 @@ namespace ClinicaPOO
             // btnEditLastn
             // 
             this.btnEditLastn.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditLastn.Location = new System.Drawing.Point(636, 279);
+            this.btnEditLastn.Location = new System.Drawing.Point(727, 372);
+            this.btnEditLastn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditLastn.Name = "btnEditLastn";
-            this.btnEditLastn.Size = new System.Drawing.Size(36, 35);
+            this.btnEditLastn.Size = new System.Drawing.Size(41, 47);
             this.btnEditLastn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditLastn.TabIndex = 62;
             this.btnEditLastn.TabStop = false;
@@ -385,9 +389,10 @@ namespace ClinicaPOO
             // btnEditEmail
             // 
             this.btnEditEmail.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditEmail.Location = new System.Drawing.Point(636, 351);
+            this.btnEditEmail.Location = new System.Drawing.Point(727, 514);
+            this.btnEditEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditEmail.Name = "btnEditEmail";
-            this.btnEditEmail.Size = new System.Drawing.Size(36, 35);
+            this.btnEditEmail.Size = new System.Drawing.Size(41, 47);
             this.btnEditEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditEmail.TabIndex = 63;
             this.btnEditEmail.TabStop = false;
@@ -396,9 +401,10 @@ namespace ClinicaPOO
             // btnEditPwd
             // 
             this.btnEditPwd.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditPwd.Location = new System.Drawing.Point(636, 425);
+            this.btnEditPwd.Location = new System.Drawing.Point(727, 665);
+            this.btnEditPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditPwd.Name = "btnEditPwd";
-            this.btnEditPwd.Size = new System.Drawing.Size(36, 35);
+            this.btnEditPwd.Size = new System.Drawing.Size(41, 47);
             this.btnEditPwd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditPwd.TabIndex = 64;
             this.btnEditPwd.TabStop = false;
@@ -407,9 +413,10 @@ namespace ClinicaPOO
             // btnEditPhone
             // 
             this.btnEditPhone.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditPhone.Location = new System.Drawing.Point(1110, 265);
+            this.btnEditPhone.Location = new System.Drawing.Point(1326, 372);
+            this.btnEditPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditPhone.Name = "btnEditPhone";
-            this.btnEditPhone.Size = new System.Drawing.Size(36, 35);
+            this.btnEditPhone.Size = new System.Drawing.Size(41, 47);
             this.btnEditPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditPhone.TabIndex = 66;
             this.btnEditPhone.TabStop = false;
@@ -418,9 +425,10 @@ namespace ClinicaPOO
             // btnEditBirth
             // 
             this.btnEditBirth.Image = global::ClinicaPOO.Properties.Resources.pngwing_com;
-            this.btnEditBirth.Location = new System.Drawing.Point(1110, 339);
+            this.btnEditBirth.Location = new System.Drawing.Point(1326, 514);
+            this.btnEditBirth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditBirth.Name = "btnEditBirth";
-            this.btnEditBirth.Size = new System.Drawing.Size(36, 35);
+            this.btnEditBirth.Size = new System.Drawing.Size(41, 47);
             this.btnEditBirth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEditBirth.TabIndex = 67;
             this.btnEditBirth.TabStop = false;
@@ -432,10 +440,9 @@ namespace ClinicaPOO
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(855, 435);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(984, 795);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(190, 56);
+            this.btnSave.Size = new System.Drawing.Size(217, 75);
             this.btnSave.TabIndex = 68;
             this.btnSave.Text = "Save changes";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -447,33 +454,17 @@ namespace ClinicaPOO
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(22)))), ((int)(((byte)(93)))));
-            this.label5.Location = new System.Drawing.Point(305, 87);
+            this.label5.Location = new System.Drawing.Point(349, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(500, 32);
+            this.label5.Size = new System.Drawing.Size(624, 41);
             this.label5.TabIndex = 69;
             this.label5.Text = "Look at your profile, or make some changes!";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(53, 100);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 87);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 562);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEditBirth);
@@ -506,7 +497,10 @@ namespace ClinicaPOO
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProfile";
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panel1.ResumeLayout(false);

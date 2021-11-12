@@ -61,7 +61,7 @@ namespace ClinicaPOO
             this.barramenu.Location = new System.Drawing.Point(0, -3);
             this.barramenu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.barramenu.Name = "barramenu";
-            this.barramenu.Size = new System.Drawing.Size(1138, 53);
+            this.barramenu.Size = new System.Drawing.Size(1127, 53);
             this.barramenu.TabIndex = 0;
             this.barramenu.TabStop = false;
             // 
@@ -273,7 +273,7 @@ namespace ClinicaPOO
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dentist\'s\r\nInformation";
+            this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.barramenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnListApp)).EndInit();

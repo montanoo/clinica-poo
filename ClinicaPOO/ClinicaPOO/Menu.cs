@@ -42,6 +42,7 @@ namespace ClinicaPOO
         {
             Login signOut = new Login();
             signOut.Show();
+            this.Hide();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace ClinicaPOO
 
         private void btnDentists_Click(object sender, EventArgs e)
         {
-            DentistInformation showDentist = new DentistInformation();
+            DentistInformation showDentist = new DentistInformation(userEmailData);
             showDentist.Show();
             this.Hide();
         }

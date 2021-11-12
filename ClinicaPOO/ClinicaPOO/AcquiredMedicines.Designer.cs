@@ -109,7 +109,7 @@ namespace ClinicaPOO
             this.txtSearch.Location = new System.Drawing.Point(420, 173);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(599, 32);
+            this.txtSearch.Size = new System.Drawing.Size(709, 32);
             this.txtSearch.TabIndex = 10;
             this.txtSearch.Text = "Search";
             this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
@@ -172,7 +172,7 @@ namespace ClinicaPOO
             this.dgvProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvProducts.EnableHeadersVisualStyles = false;
             this.dgvProducts.GridColor = System.Drawing.Color.White;
-            this.dgvProducts.Location = new System.Drawing.Point(420, 291);
+            this.dgvProducts.Location = new System.Drawing.Point(306, 291);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -195,7 +195,7 @@ namespace ClinicaPOO
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.MediumVioletRed;
             this.dgvProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProducts.RowTemplate.Height = 29;
-            this.dgvProducts.Size = new System.Drawing.Size(599, 565);
+            this.dgvProducts.Size = new System.Drawing.Size(823, 565);
             this.dgvProducts.TabIndex = 3;
             // 
             // pictureBox1

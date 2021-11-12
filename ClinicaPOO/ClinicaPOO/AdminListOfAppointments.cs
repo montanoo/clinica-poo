@@ -35,6 +35,7 @@ namespace ClinicaPOO
             commandJOIN += "INNER JOIN patient ON appointments.patient_id = patient.id ";
             commandJOIN += "INNER JOIN methods ON appointments.method_id = methods.id ";
             commandJOIN += "INNER JOIN dentist ON appointments.dentist_id = dentist.id ";
+            commandJOIN += "WHERE methods.id > 1 ";
 
             SqlCommand cmd = new SqlCommand(commandJOIN, conn);
             SqlDataAdapter data = new SqlDataAdapter(cmd);

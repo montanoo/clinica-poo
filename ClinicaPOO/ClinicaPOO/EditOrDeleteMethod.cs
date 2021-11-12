@@ -16,21 +16,26 @@ namespace ClinicaPOO
         {
             try
             {
-                sqlVariables.Connect();
-                string connectString = sqlVariables.WindowsAuth;
-                SqlConnection windowsAuthConn = new SqlConnection(connectString);
+                if (cmbMethod.SelectedIndex != -1)
+                {
+                    sqlVariables.Connect();
+                    string connectString = sqlVariables.WindowsAuth;
+                    SqlConnection windowsAuthConn = new SqlConnection(connectString);
 
-                string currentMethod = cmbMethod.SelectedItem.ToString(); ;
+                    string currentMethod = cmbMethod.SelectedItem.ToString(); ;
 
-                string deletion;
-                deletion = $"DELETE FROM methods WHERE id IN (SELECT id from methods WHERE name = '{currentMethod}')";
+                    string deletion;
+                    deletion = $"DELETE FROM methods WHERE id IN (SELECT id from methods WHERE name = '{currentMethod}')";
 
-                windowsAuthConn.Open();
-                SqlCommand delete = new SqlCommand(deletion, windowsAuthConn);
-                delete.ExecuteNonQuery();
-                windowsAuthConn.Close();
+                    windowsAuthConn.Open();
+                    SqlCommand delete = new SqlCommand(deletion, windowsAuthConn);
+                    delete.ExecuteNonQuery();
+                    windowsAuthConn.Close();
 
-                MessageBox.Show("Method deleted with success", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Method deleted with success", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Please select a method first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Error)
             {
@@ -46,7 +51,7 @@ namespace ClinicaPOO
                 string connectString = sqlVariables.WindowsAuth;
                 SqlConnection windowsAuthConn = new SqlConnection(connectString);
                 windowsAuthConn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM methods", windowsAuthConn);
+                SqlCommand command = new SqlCommand("SELECT * FROM methods WHERE id > 1", windowsAuthConn);
                 SqlDataReader readData = command.ExecuteReader();
 
                 while (readData.Read())

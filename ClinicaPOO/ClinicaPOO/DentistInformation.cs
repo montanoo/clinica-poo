@@ -13,15 +13,14 @@ using System.Data.OleDb;
 namespace ClinicaPOO
 {
     public partial class DentistInformation : Form
-
-
     {
+        string userEmailData;
         private SqlConnection conn;
         private string sCn;
         ///variables for search bar
         public DataTable input;
         string filterField = "specialty";
-        public DentistInformation()
+        public DentistInformation(string email)
         {
             InitializeComponent();
             //using class Connection
@@ -31,11 +30,11 @@ namespace ClinicaPOO
             conn = new SqlConnection(sCn);
             //open connection
             conn.Open();
-        
+            userEmailData = email;
         }
         public DataTable AddData()
         {
-            string commandJOIN = "SELECT dentist.name, dentist.specialty, dentist.status, dentist.email, dentist.phone FROM dentist";
+            string commandJOIN = "SELECT dentist.name, dentist.specialty, dentist.status, dentist.email, dentist.phone FROM dentist WHERE dentist.status = 1";
             SqlCommand cmd = new SqlCommand(commandJOIN, conn);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -66,10 +65,9 @@ namespace ClinicaPOO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Podes des comentar esto, lo hice pa ahorrate este boton :D
-            //Menu returnToMenu = new Menu(userEmailValue);
-            //returnToMenu.Show();
-            //this.Hide();
+            Menu returnToMenu = new Menu(userEmailData);
+            returnToMenu.Show();
+            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -85,6 +83,11 @@ namespace ClinicaPOO
                 specialitytxt.Text = "";
             }
             input.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, specialitytxt.Text);
+        }
+
+        private void DentistInformation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
     }
