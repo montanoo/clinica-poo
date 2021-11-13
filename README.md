@@ -31,3 +31,6 @@ Proyecto bajo la licencia **CC BY-SA 4.0 (Attribution-ShareAlike)**: Especificad
 - <a href="https://drive.google.com/file/d/1coBwyFrCSIHyTsQRne6dFUXxgJ9rsK4T/view?usp=sharing"> Video con narrativa 👾 </a>
 - <a href="https://drive.google.com/file/d/1tJ238hyITogQuFMnCtMriLoUXBz5ti_4/view?usp=sharing"> Logos 💻 </a>
 ---
+### Diccionario de datos: modelamiento y diseño de bases de datos 🧐
+- <a href="https://drive.google.com/file/d/1sgQtQOFWAoxHwVYeLkqtPyDAWZiddpSu/view?usp=sharing"> Diccionario de datos 🍿 </a>
+--- 
