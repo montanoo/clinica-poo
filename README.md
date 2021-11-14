@@ -27,7 +27,7 @@ Proyecto bajo la licencia **CC BY-SA 4.0 (Attribution-ShareAlike)**: Especificad
 ---
 ### Segunda entrega: programación orientada a objetos 🍜
 - <a href="https://drive.google.com/file/d/1QD9-nMBIzZobUU5GQe_o6LQUyFzbPJJW/view?usp=sharing"> Manual técnico 📎 </a>
-- <a href="https://drive.google.com/file/d/181JrIxUPM-w6ldBnhZGr-hbf3tF6X-zJ/view?usp=sharing"> Manual de usuario ✨ </a>
+- <a href="https://drive.google.com/file/d/1aLPks9iJ0zphzDWXlpRqOfVOeFuUAyps/view?usp=sharing"> Manual de usuario completo ✨ </a>
 - <a href="https://drive.google.com/file/d/1coBwyFrCSIHyTsQRne6dFUXxgJ9rsK4T/view?usp=sharing"> Video con narrativa 👾 </a>
 - <a href="https://drive.google.com/file/d/1tJ238hyITogQuFMnCtMriLoUXBz5ti_4/view?usp=sharing"> Logos 💻 </a>
 ---
