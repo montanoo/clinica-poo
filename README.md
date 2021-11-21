@@ -33,4 +33,5 @@ Proyecto bajo la licencia **CC BY-SA 4.0 (Attribution-ShareAlike)**: Especificad
 ---
 ### Diccionario de datos: modelamiento y diseño de bases de datos 🧐
 - <a href="https://drive.google.com/file/d/1sgQtQOFWAoxHwVYeLkqtPyDAWZiddpSu/view?usp=sharing"> Diccionario de datos 🍿 </a>
+- Todos los inserts se encuentran en la carpeta ClinicaPOO > Database
 --- 
